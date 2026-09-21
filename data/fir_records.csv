@@ -1,0 +1,221 @@
+fir_id,accused_suspect_ids,crime_type,ipc_section,city,filed_date,case_status,police_station
+FIR0001,SUS0036;SUS0022;SUS0122,Money Laundering,IT Act 66C,Pune,2026-08-04,Court Trial,PS South
+FIR0002,SUS0129;SUS0002,Cyber Fraud,IT Act 66C,Amritsar,2026-01-04,Acquitted,Cyber Cell
+FIR0003,SUS0115,Arms Smuggling,NDPS Act 8,Indore,2026-02-22,Convicted,Cyber Cell
+FIR0004,SUS0082;SUS0150;SUS0048,Money Laundering,IPC 420,Chandigarh,2026-03-01,Court Trial,Cyber Cell
+FIR0005,SUS0142;SUS0059,Extortion,IT Act 66C,Lucknow,2026-07-30,Acquitted,PS West
+FIR0006,SUS0024;SUS0012;SUS0014;SUS0114,Organized Robbery,IPC 363,Mumbai,2026-01-04,Chargesheet Filed,Cyber Cell
+FIR0007,SUS0087;SUS0115;SUS0104,Human Trafficking,IPC 302,Chandigarh,2026-01-20,Closed,PS West
+FIR0008,SUS0144;SUS0073;SUS0024,Arms Smuggling,IPC 384,Nagpur,2026-06-28,Acquitted,Cyber Cell
+FIR0009,SUS0081;SUS0090,Extortion,IPC 363,Jaipur,2026-07-18,Acquitted,PS North
+FIR0010,SUS0044;SUS0137;SUS0121;SUS0092,Kidnapping,PMLA 3,Surat,2026-08-09,Convicted,PS Central
+FIR0011,SUS0013;SUS0036,Money Laundering,IT Act 66C,Lucknow,2026-04-17,Acquitted,PS East
+FIR0012,SUS0025;SUS0022;SUS0088;SUS0133,Extortion,IPC 420,Chandigarh,2026-05-24,Convicted,PS East
+FIR0013,SUS0134,Arms Smuggling,IPC 420,Amritsar,2026-07-22,Acquitted,PS Central
+FIR0014,SUS0148;SUS0031;SUS0030;SUS0107,Cyber Fraud,NDPS Act 8,Amritsar,2026-01-31,Court Trial,PS South
+FIR0015,SUS0098;SUS0021;SUS0027,Human Trafficking,IPC 302,Ranchi,2026-05-30,Convicted,PS East
+FIR0016,SUS0078;SUS0045;SUS0126,Money Laundering,IPC 384,Jaipur,2026-02-24,Court Trial,Cyber Cell
+FIR0017,SUS0075;SUS0144;SUS0127;SUS0118,Drug Trafficking,PMLA 3,Ahmedabad,2026-01-02,Convicted,PS Central
+FIR0018,SUS0088;SUS0063,Money Laundering,IPC 420,Pune,2026-02-14,Under Investigation,Cyber Cell
+FIR0019,SUS0141,Extortion,IT Act 66C,Indore,2026-02-11,Convicted,PS West
+FIR0020,SUS0105,Kidnapping,IT Act 66C,Patna,2026-06-20,Under Investigation,PS North
+FIR0021,SUS0093;SUS0053;SUS0141;SUS0056,Money Laundering,PMLA 3,Mumbai,2026-08-01,Court Trial,PS South
+FIR0022,SUS0136;SUS0035;SUS0028;SUS0001,Drug Trafficking,IPC 376,Nagpur,2026-08-01,Acquitted,PS East
+FIR0023,SUS0006,Drug Trafficking,IPC 376,Indore,2026-04-25,Convicted,PS Central
+FIR0024,SUS0112;SUS0149;SUS0058;SUS0043,Organized Robbery,IPC 302,Surat,2026-01-10,Convicted,PS North
+FIR0025,SUS0130;SUS0070;SUS0040,Kidnapping,PMLA 3,Patna,2026-06-22,Closed,PS West
+FIR0026,SUS0105;SUS0046;SUS0089;SUS0016,Organized Robbery,NDPS Act 8,Nagpur,2026-08-07,Closed,PS South
+FIR0027,SUS0082;SUS0114;SUS0035;SUS0110,Kidnapping,Arms Act 25,Nagpur,2026-05-01,Closed,PS Central
+FIR0028,SUS0129;SUS0027,Arms Smuggling,PMLA 3,Indore,2026-04-25,Convicted,PS South
+FIR0029,SUS0011,Arms Smuggling,Arms Act 25,Ranchi,2026-02-19,Chargesheet Filed,PS North
+FIR0030,SUS0048,Extortion,IT Act 66C,Surat,2026-04-22,Chargesheet Filed,PS Central
+FIR0031,SUS0033;SUS0100,Arms Smuggling,Arms Act 25,Pune,2026-06-19,Closed,PS East
+FIR0032,SUS0062;SUS0003,Drug Trafficking,PMLA 3,Ranchi,2026-06-06,Closed,PS Central
+FIR0033,SUS0059;SUS0086;SUS0023;SUS0111,Money Laundering,IPC 384,Nagpur,2026-05-12,Chargesheet Filed,PS South
+FIR0034,SUS0103;SUS0123;SUS0095;SUS0032,Money Laundering,IPC 363,Jaipur,2026-02-02,Court Trial,Cyber Cell
+FIR0035,SUS0016,Money Laundering,IPC 376,Bhopal,2026-07-04,Acquitted,PS East
+FIR0036,SUS0050;SUS0035,Kidnapping,IPC 376,Jaipur,2026-05-07,Closed,PS North
+FIR0037,SUS0137;SUS0091,Kidnapping,IPC 384,Ranchi,2026-06-28,Convicted,PS North
+FIR0038,SUS0036;SUS0057;SUS0128;SUS0046,Money Laundering,IPC 120B,Jaipur,2026-02-17,Under Investigation,PS Central
+FIR0039,SUS0059;SUS0121,Drug Trafficking,IPC 302,Ahmedabad,2026-07-31,Acquitted,PS West
+FIR0040,SUS0037;SUS0054;SUS0065,Drug Trafficking,IPC 376,Patna,2026-08-28,Court Trial,PS Central
+FIR0041,SUS0051;SUS0049;SUS0060,Human Trafficking,IPC 420,Nagpur,2026-08-16,Acquitted,PS West
+FIR0042,SUS0137;SUS0072,Kidnapping,IPC 420,Pune,2026-04-04,Closed,Cyber Cell
+FIR0043,SUS0141;SUS0004;SUS0069;SUS0119,Organized Robbery,IPC 420,Surat,2026-02-26,Convicted,Cyber Cell
+FIR0044,SUS0030;SUS0123;SUS0108,Kidnapping,IPC 363,Delhi,2026-05-27,Acquitted,Cyber Cell
+FIR0045,SUS0076;SUS0095;SUS0092;SUS0079,Extortion,IPC 420,Kanpur,2026-03-19,Court Trial,Cyber Cell
+FIR0046,SUS0119;SUS0041,Arms Smuggling,IPC 302,Kanpur,2026-04-22,Chargesheet Filed,Cyber Cell
+FIR0047,SUS0116;SUS0051,Kidnapping,IPC 363,Ahmedabad,2026-06-15,Closed,PS West
+FIR0048,SUS0068;SUS0034,Human Trafficking,IPC 120B,Delhi,2026-05-15,Chargesheet Filed,PS West
+FIR0049,SUS0120;SUS0133;SUS0056;SUS0055,Money Laundering,IPC 302,Jaipur,2026-01-21,Chargesheet Filed,PS Central
+FIR0050,SUS0149;SUS0108;SUS0089,Money Laundering,IPC 420,Nagpur,2026-07-24,Acquitted,Cyber Cell
+FIR0051,SUS0033,Drug Trafficking,IT Act 66C,Bhopal,2026-03-26,Court Trial,Cyber Cell
+FIR0052,SUS0010;SUS0104;SUS0118;SUS0058,Organized Robbery,IT Act 66C,Indore,2026-03-18,Under Investigation,PS South
+FIR0053,SUS0064;SUS0037;SUS0144;SUS0150,Cyber Fraud,IPC 302,Jaipur,2026-04-02,Convicted,PS South
+FIR0054,SUS0080;SUS0038,Organized Robbery,IT Act 66C,Pune,2026-08-08,Chargesheet Filed,PS Central
+FIR0055,SUS0091;SUS0145;SUS0103,Organized Robbery,NDPS Act 8,Jaipur,2026-03-03,Convicted,Cyber Cell
+FIR0056,SUS0059;SUS0066;SUS0087;SUS0074,Human Trafficking,IPC 363,Surat,2026-01-02,Closed,PS South
+FIR0057,SUS0107;SUS0093;SUS0112,Money Laundering,IPC 376,Mumbai,2026-07-19,Court Trial,PS Central
+FIR0058,SUS0056;SUS0009;SUS0014;SUS0039,Cyber Fraud,IPC 302,Nagpur,2026-07-09,Chargesheet Filed,Cyber Cell
+FIR0059,SUS0053;SUS0098;SUS0097;SUS0057,Extortion,Arms Act 25,Patna,2026-06-24,Court Trial,Cyber Cell
+FIR0060,SUS0053;SUS0048;SUS0044;SUS0073,Organized Robbery,NDPS Act 8,Surat,2026-08-24,Chargesheet Filed,PS West
+FIR0061,SUS0110,Kidnapping,IPC 302,Ranchi,2026-06-20,Under Investigation,PS West
+FIR0062,SUS0009,Drug Trafficking,NDPS Act 8,Ahmedabad,2026-06-04,Convicted,PS East
+FIR0063,SUS0006;SUS0114;SUS0054;SUS0040,Arms Smuggling,NDPS Act 8,Amritsar,2026-04-16,Court Trial,PS West
+FIR0064,SUS0121;SUS0132,Money Laundering,NDPS Act 8,Mumbai,2026-04-02,Court Trial,PS East
+FIR0065,SUS0006,Human Trafficking,PMLA 3,Mumbai,2026-06-03,Court Trial,PS South
+FIR0066,SUS0144;SUS0028;SUS0004,Money Laundering,PMLA 3,Chandigarh,2026-03-15,Chargesheet Filed,Cyber Cell
+FIR0067,SUS0108;SUS0112;SUS0148,Arms Smuggling,NDPS Act 8,Amritsar,2026-08-02,Court Trial,PS North
+FIR0068,SUS0139;SUS0113,Drug Trafficking,Arms Act 25,Pune,2026-07-16,Convicted,PS West
+FIR0069,SUS0085,Kidnapping,Arms Act 25,Amritsar,2026-04-10,Under Investigation,PS West
+FIR0070,SUS0114;SUS0139,Arms Smuggling,PMLA 3,Indore,2026-07-24,Under Investigation,PS West
+FIR0071,SUS0114;SUS0071,Arms Smuggling,Arms Act 25,Delhi,2026-03-04,Convicted,PS East
+FIR0072,SUS0055;SUS0129;SUS0011,Extortion,Arms Act 25,Delhi,2026-04-12,Chargesheet Filed,PS North
+FIR0073,SUS0131,Kidnapping,NDPS Act 8,Bhopal,2026-08-09,Convicted,Cyber Cell
+FIR0074,SUS0068;SUS0057,Human Trafficking,Arms Act 25,Lucknow,2026-03-18,Convicted,PS East
+FIR0075,SUS0046;SUS0029;SUS0048,Cyber Fraud,Arms Act 25,Bhopal,2026-07-29,Under Investigation,PS North
+FIR0076,SUS0017;SUS0002;SUS0134;SUS0140,Human Trafficking,Arms Act 25,Chandigarh,2026-01-12,Closed,PS East
+FIR0077,SUS0098;SUS0110;SUS0001,Arms Smuggling,IPC 120B,Ranchi,2026-08-20,Under Investigation,PS North
+FIR0078,SUS0104;SUS0067;SUS0113;SUS0071,Kidnapping,IPC 120B,Mumbai,2026-04-28,Acquitted,Cyber Cell
+FIR0079,SUS0110,Extortion,IPC 384,Mumbai,2026-01-21,Closed,PS Central
+FIR0080,SUS0148;SUS0104,Money Laundering,Arms Act 25,Ahmedabad,2026-06-28,Court Trial,Cyber Cell
+FIR0081,SUS0145,Drug Trafficking,IPC 302,Ranchi,2026-08-20,Closed,PS Central
+FIR0082,SUS0134;SUS0057;SUS0056,Money Laundering,IPC 384,Chandigarh,2026-02-25,Convicted,PS East
+FIR0083,SUS0001;SUS0026;SUS0058;SUS0132,Money Laundering,IPC 302,Ranchi,2026-03-22,Under Investigation,PS North
+FIR0084,SUS0124;SUS0050;SUS0133,Cyber Fraud,IPC 302,Mumbai,2026-01-03,Chargesheet Filed,PS South
+FIR0085,SUS0120;SUS0025;SUS0139,Money Laundering,IPC 363,Delhi,2026-01-24,Court Trial,Cyber Cell
+FIR0086,SUS0076,Cyber Fraud,IPC 376,Amritsar,2026-06-05,Court Trial,Cyber Cell
+FIR0087,SUS0010;SUS0092;SUS0087,Cyber Fraud,IPC 120B,Jaipur,2026-01-31,Convicted,PS East
+FIR0088,SUS0021;SUS0129;SUS0111;SUS0127,Organized Robbery,IPC 302,Ahmedabad,2026-01-20,Under Investigation,Cyber Cell
+FIR0089,SUS0038;SUS0053;SUS0042,Money Laundering,IPC 302,Indore,2026-07-12,Acquitted,PS Central
+FIR0090,SUS0022;SUS0040;SUS0057;SUS0054,Extortion,IPC 420,Ranchi,2026-07-28,Chargesheet Filed,PS South
+FIR0091,SUS0042;SUS0035;SUS0011,Arms Smuggling,IPC 302,Nagpur,2026-05-25,Under Investigation,PS North
+FIR0092,SUS0019;SUS0121;SUS0127;SUS0093,Money Laundering,IT Act 66C,Pune,2026-05-14,Acquitted,PS East
+FIR0093,SUS0139;SUS0002;SUS0100,Cyber Fraud,IPC 420,Patna,2026-04-13,Chargesheet Filed,PS East
+FIR0094,SUS0009;SUS0059,Drug Trafficking,IT Act 66C,Surat,2026-08-23,Closed,PS Central
+FIR0095,SUS0082;SUS0126;SUS0024;SUS0044,Cyber Fraud,IPC 363,Bhopal,2026-01-29,Under Investigation,Cyber Cell
+FIR0096,SUS0139,Cyber Fraud,IPC 384,Chandigarh,2026-01-21,Acquitted,Cyber Cell
+FIR0097,SUS0057;SUS0051,Extortion,Arms Act 25,Kanpur,2026-01-16,Convicted,Cyber Cell
+FIR0098,SUS0149;SUS0035;SUS0016;SUS0110,Extortion,IPC 376,Mumbai,2026-07-21,Closed,Cyber Cell
+FIR0099,SUS0111;SUS0143;SUS0130,Cyber Fraud,IPC 302,Amritsar,2026-06-29,Convicted,Cyber Cell
+FIR0100,SUS0028;SUS0147;SUS0104;SUS0141,Arms Smuggling,Arms Act 25,Delhi,2026-01-13,Closed,PS North
+FIR0101,SUS0017,Drug Trafficking,IPC 376,Ranchi,2026-02-06,Court Trial,PS Central
+FIR0102,SUS0104,Arms Smuggling,IPC 420,Patna,2026-07-21,Convicted,PS Central
+FIR0103,SUS0066;SUS0105;SUS0011,Cyber Fraud,IPC 120B,Indore,2026-08-13,Under Investigation,PS South
+FIR0104,SUS0142,Human Trafficking,NDPS Act 8,Bhopal,2026-08-04,Convicted,PS South
+FIR0105,SUS0072;SUS0145;SUS0091,Kidnapping,IPC 302,Surat,2026-01-08,Acquitted,Cyber Cell
+FIR0106,SUS0129;SUS0009;SUS0106,Extortion,PMLA 3,Lucknow,2026-07-31,Closed,PS East
+FIR0107,SUS0143;SUS0057;SUS0140;SUS0090,Drug Trafficking,PMLA 3,Lucknow,2026-05-27,Chargesheet Filed,PS West
+FIR0108,SUS0021;SUS0079;SUS0037,Drug Trafficking,NDPS Act 8,Surat,2026-06-20,Closed,PS East
+FIR0109,SUS0111;SUS0046;SUS0081;SUS0049,Arms Smuggling,PMLA 3,Bhopal,2026-06-22,Court Trial,PS West
+FIR0110,SUS0089,Drug Trafficking,IPC 420,Bhopal,2026-02-19,Closed,PS East
+FIR0111,SUS0135;SUS0103,Organized Robbery,NDPS Act 8,Nagpur,2026-02-01,Acquitted,PS East
+FIR0112,SUS0150;SUS0004;SUS0035,Kidnapping,IPC 384,Surat,2026-07-20,Court Trial,PS East
+FIR0113,SUS0031,Kidnapping,IT Act 66C,Pune,2026-07-14,Acquitted,PS West
+FIR0114,SUS0112;SUS0003;SUS0049;SUS0079,Extortion,NDPS Act 8,Ranchi,2026-06-02,Court Trial,PS West
+FIR0115,SUS0124;SUS0012;SUS0032;SUS0102,Kidnapping,IPC 384,Chandigarh,2026-04-05,Court Trial,Cyber Cell
+FIR0116,SUS0076;SUS0012;SUS0041;SUS0017,Money Laundering,PMLA 3,Pune,2026-08-18,Chargesheet Filed,PS Central
+FIR0117,SUS0083;SUS0038,Extortion,IPC 376,Kanpur,2026-03-12,Chargesheet Filed,PS South
+FIR0118,SUS0009;SUS0001;SUS0134;SUS0083,Arms Smuggling,IPC 120B,Bhopal,2026-07-10,Under Investigation,PS East
+FIR0119,SUS0028;SUS0093,Drug Trafficking,Arms Act 25,Ranchi,2026-08-06,Chargesheet Filed,PS Central
+FIR0120,SUS0059;SUS0085;SUS0051,Cyber Fraud,IPC 376,Patna,2026-07-16,Under Investigation,PS West
+FIR0121,SUS0096;SUS0106;SUS0005,Human Trafficking,NDPS Act 8,Nagpur,2026-03-26,Chargesheet Filed,PS North
+FIR0122,SUS0033;SUS0032,Cyber Fraud,IPC 384,Amritsar,2026-01-02,Convicted,PS South
+FIR0123,SUS0058;SUS0028;SUS0071,Cyber Fraud,NDPS Act 8,Chandigarh,2026-08-21,Under Investigation,PS West
+FIR0124,SUS0132;SUS0057;SUS0068;SUS0051,Organized Robbery,PMLA 3,Surat,2026-06-24,Convicted,PS North
+FIR0125,SUS0012;SUS0039;SUS0025,Cyber Fraud,IT Act 66C,Amritsar,2026-08-26,Convicted,PS North
+FIR0126,SUS0024;SUS0056,Cyber Fraud,IPC 363,Mumbai,2026-05-06,Acquitted,PS Central
+FIR0127,SUS0146,Extortion,NDPS Act 8,Pune,2026-04-09,Court Trial,PS South
+FIR0128,SUS0133;SUS0112;SUS0056;SUS0086,Organized Robbery,PMLA 3,Lucknow,2026-04-03,Closed,PS North
+FIR0129,SUS0055;SUS0077;SUS0129;SUS0134,Extortion,IPC 376,Patna,2026-05-17,Court Trial,Cyber Cell
+FIR0130,SUS0081;SUS0080,Extortion,IPC 384,Nagpur,2026-03-17,Closed,PS North
+FIR0131,SUS0030;SUS0018;SUS0120,Extortion,IPC 363,Delhi,2026-05-15,Closed,PS Central
+FIR0132,SUS0065;SUS0087,Human Trafficking,IPC 363,Patna,2026-04-04,Convicted,PS North
+FIR0133,SUS0041;SUS0002;SUS0068;SUS0113,Organized Robbery,IT Act 66C,Bhopal,2026-04-12,Court Trial,Cyber Cell
+FIR0134,SUS0137,Organized Robbery,NDPS Act 8,Kanpur,2026-02-02,Acquitted,Cyber Cell
+FIR0135,SUS0021;SUS0034;SUS0015;SUS0121,Human Trafficking,IPC 420,Nagpur,2026-03-22,Chargesheet Filed,Cyber Cell
+FIR0136,SUS0143;SUS0093;SUS0049;SUS0027,Extortion,IT Act 66C,Pune,2026-04-06,Under Investigation,Cyber Cell
+FIR0137,SUS0124,Arms Smuggling,IPC 420,Lucknow,2026-08-04,Closed,PS North
+FIR0138,SUS0032,Kidnapping,IPC 420,Lucknow,2026-01-04,Closed,PS South
+FIR0139,SUS0098;SUS0079,Organized Robbery,NDPS Act 8,Lucknow,2026-04-01,Chargesheet Filed,PS North
+FIR0140,SUS0123,Cyber Fraud,Arms Act 25,Jaipur,2026-01-25,Chargesheet Filed,PS North
+FIR0141,SUS0149;SUS0116;SUS0043,Kidnapping,IPC 120B,Indore,2026-06-09,Under Investigation,PS Central
+FIR0142,SUS0012,Human Trafficking,NDPS Act 8,Jaipur,2026-07-11,Closed,PS South
+FIR0143,SUS0094;SUS0139;SUS0092;SUS0142,Kidnapping,IPC 420,Patna,2026-07-03,Convicted,PS West
+FIR0144,SUS0122,Kidnapping,IPC 302,Patna,2026-05-12,Chargesheet Filed,PS Central
+FIR0145,SUS0147;SUS0040;SUS0128,Arms Smuggling,IPC 376,Indore,2026-06-05,Court Trial,PS North
+FIR0146,SUS0126;SUS0074,Drug Trafficking,IPC 376,Jaipur,2026-05-30,Under Investigation,PS North
+FIR0147,SUS0048;SUS0059,Money Laundering,NDPS Act 8,Ahmedabad,2026-08-11,Under Investigation,PS East
+FIR0148,SUS0075,Human Trafficking,IPC 420,Lucknow,2026-04-26,Acquitted,Cyber Cell
+FIR0149,SUS0102;SUS0143,Arms Smuggling,PMLA 3,Indore,2026-04-29,Acquitted,PS East
+FIR0150,SUS0002;SUS0118;SUS0005,Kidnapping,IT Act 66C,Bhopal,2026-02-26,Closed,PS East
+FIR0151,SUS0001,Organized Robbery,IT Act 66C,Patna,2026-06-22,Chargesheet Filed,PS North
+FIR0152,SUS0031;SUS0047,Extortion,IPC 420,Surat,2026-07-21,Chargesheet Filed,PS West
+FIR0153,SUS0138;SUS0043;SUS0124;SUS0143,Arms Smuggling,PMLA 3,Pune,2026-07-22,Court Trial,PS South
+FIR0154,SUS0053;SUS0051,Drug Trafficking,NDPS Act 8,Patna,2026-08-06,Closed,Cyber Cell
+FIR0155,SUS0146;SUS0043;SUS0010;SUS0103,Kidnapping,IPC 302,Amritsar,2026-04-13,Closed,PS West
+FIR0156,SUS0060;SUS0025;SUS0047,Arms Smuggling,NDPS Act 8,Jaipur,2026-02-21,Closed,PS West
+FIR0157,SUS0149;SUS0144;SUS0024,Arms Smuggling,IT Act 66C,Kanpur,2026-01-29,Under Investigation,PS North
+FIR0158,SUS0047;SUS0031;SUS0008,Kidnapping,IPC 376,Indore,2026-08-12,Convicted,Cyber Cell
+FIR0159,SUS0122,Drug Trafficking,NDPS Act 8,Ahmedabad,2026-07-13,Acquitted,Cyber Cell
+FIR0160,SUS0097;SUS0065,Cyber Fraud,IPC 420,Patna,2026-06-10,Court Trial,Cyber Cell
+FIR0161,SUS0149;SUS0090;SUS0093,Money Laundering,IPC 120B,Amritsar,2026-07-08,Closed,PS North
+FIR0162,SUS0064,Human Trafficking,IPC 420,Jaipur,2026-05-08,Court Trial,PS North
+FIR0163,SUS0087;SUS0148;SUS0128;SUS0046,Kidnapping,PMLA 3,Bhopal,2026-05-06,Convicted,PS East
+FIR0164,SUS0125;SUS0094;SUS0146;SUS0054,Kidnapping,IPC 420,Jaipur,2026-04-03,Closed,PS Central
+FIR0165,SUS0066;SUS0019;SUS0150;SUS0089,Drug Trafficking,IPC 363,Nagpur,2026-02-26,Convicted,PS South
+FIR0166,SUS0111;SUS0126,Extortion,IPC 376,Jaipur,2026-08-07,Convicted,PS West
+FIR0167,SUS0126,Kidnapping,IPC 420,Kanpur,2026-08-06,Under Investigation,PS Central
+FIR0168,SUS0020,Human Trafficking,IPC 120B,Mumbai,2026-01-21,Closed,PS South
+FIR0169,SUS0079,Extortion,IPC 376,Bhopal,2026-03-14,Closed,PS East
+FIR0170,SUS0020;SUS0067,Drug Trafficking,IPC 420,Delhi,2026-05-30,Acquitted,PS West
+FIR0171,SUS0025;SUS0099;SUS0065;SUS0118,Drug Trafficking,NDPS Act 8,Chandigarh,2026-06-30,Acquitted,Cyber Cell
+FIR0172,SUS0088,Organized Robbery,IPC 376,Ahmedabad,2026-08-20,Acquitted,PS Central
+FIR0173,SUS0117;SUS0147;SUS0098;SUS0119,Human Trafficking,IT Act 66C,Indore,2026-06-20,Chargesheet Filed,PS Central
+FIR0174,SUS0031;SUS0012;SUS0047;SUS0050,Extortion,IT Act 66C,Lucknow,2026-04-28,Chargesheet Filed,Cyber Cell
+FIR0175,SUS0015;SUS0094,Kidnapping,IPC 120B,Surat,2026-05-11,Court Trial,PS North
+FIR0176,SUS0093;SUS0121;SUS0027,Money Laundering,Arms Act 25,Amritsar,2026-06-20,Acquitted,PS East
+FIR0177,SUS0041;SUS0126,Drug Trafficking,IPC 420,Mumbai,2026-04-30,Acquitted,PS South
+FIR0178,SUS0025;SUS0120;SUS0128,Extortion,IT Act 66C,Delhi,2026-02-22,Convicted,PS East
+FIR0179,SUS0105;SUS0131;SUS0142,Kidnapping,IPC 420,Delhi,2026-06-26,Convicted,PS South
+FIR0180,SUS0052;SUS0089;SUS0129;SUS0097,Arms Smuggling,IPC 376,Patna,2026-05-03,Chargesheet Filed,PS East
+FIR0181,SUS0070;SUS0128;SUS0014,Kidnapping,IPC 376,Pune,2026-02-13,Court Trial,PS East
+FIR0182,SUS0109;SUS0090;SUS0101;SUS0068,Money Laundering,IPC 363,Indore,2026-07-08,Acquitted,Cyber Cell
+FIR0183,SUS0099;SUS0067;SUS0150;SUS0068,Cyber Fraud,Arms Act 25,Kanpur,2026-04-24,Acquitted,Cyber Cell
+FIR0184,SUS0071;SUS0114,Arms Smuggling,Arms Act 25,Nagpur,2026-08-21,Under Investigation,Cyber Cell
+FIR0185,SUS0065;SUS0007,Money Laundering,IPC 376,Indore,2026-07-18,Court Trial,PS North
+FIR0186,SUS0144,Arms Smuggling,IPC 363,Surat,2026-07-05,Court Trial,PS South
+FIR0187,SUS0067;SUS0086,Drug Trafficking,IPC 376,Indore,2026-08-13,Closed,PS South
+FIR0188,SUS0124,Drug Trafficking,Arms Act 25,Jaipur,2026-05-15,Convicted,PS North
+FIR0189,SUS0137;SUS0096,Kidnapping,IPC 120B,Jaipur,2026-08-25,Chargesheet Filed,Cyber Cell
+FIR0190,SUS0064,Kidnapping,NDPS Act 8,Patna,2026-04-15,Convicted,PS Central
+FIR0191,SUS0008;SUS0122;SUS0057,Human Trafficking,IPC 302,Ranchi,2026-04-28,Closed,PS Central
+FIR0192,SUS0001;SUS0099;SUS0056,Arms Smuggling,IPC 302,Kanpur,2026-02-15,Under Investigation,PS Central
+FIR0193,SUS0105;SUS0093,Human Trafficking,IPC 363,Indore,2026-05-13,Acquitted,PS West
+FIR0194,SUS0053;SUS0052;SUS0075;SUS0102,Arms Smuggling,IT Act 66C,Lucknow,2026-04-30,Acquitted,PS East
+FIR0195,SUS0010;SUS0064;SUS0056;SUS0035,Organized Robbery,IPC 376,Chandigarh,2026-08-20,Convicted,PS West
+FIR0196,SUS0068;SUS0029;SUS0086;SUS0038,Drug Trafficking,IPC 120B,Lucknow,2026-07-20,Under Investigation,PS Central
+FIR0197,SUS0006,Organized Robbery,IT Act 66C,Delhi,2026-02-15,Court Trial,PS West
+FIR0198,SUS0084,Kidnapping,NDPS Act 8,Ahmedabad,2026-01-30,Closed,PS West
+FIR0199,SUS0122;SUS0145;SUS0121;SUS0052,Human Trafficking,IPC 376,Chandigarh,2026-05-13,Under Investigation,PS East
+FIR0200,SUS0068,Human Trafficking,Arms Act 25,Indore,2026-03-06,Acquitted,PS South
+FIR0201,SUS0122;SUS0136;SUS0054,Money Laundering,IPC 302,Ranchi,2026-08-07,Closed,Cyber Cell
+FIR0202,SUS0105;SUS0009,Organized Robbery,IPC 302,Patna,2026-02-17,Court Trial,PS West
+FIR0203,SUS0086;SUS0111;SUS0121;SUS0016,Cyber Fraud,IPC 363,Nagpur,2026-05-04,Under Investigation,PS North
+FIR0204,SUS0062;SUS0103,Cyber Fraud,IPC 376,Surat,2026-08-25,Under Investigation,PS North
+FIR0205,SUS0126;SUS0119,Money Laundering,IPC 120B,Nagpur,2026-03-06,Convicted,PS West
+FIR0206,SUS0027;SUS0054;SUS0064,Kidnapping,IPC 363,Indore,2026-05-08,Under Investigation,PS South
+FIR0207,SUS0126,Cyber Fraud,IPC 302,Nagpur,2026-05-29,Court Trial,Cyber Cell
+FIR0208,SUS0031;SUS0008;SUS0110,Drug Trafficking,PMLA 3,Delhi,2026-03-10,Court Trial,PS West
+FIR0209,SUS0138;SUS0078,Arms Smuggling,IPC 363,Jaipur,2026-04-23,Under Investigation,PS North
+FIR0210,SUS0133;SUS0090;SUS0119,Kidnapping,Arms Act 25,Nagpur,2026-02-24,Closed,Cyber Cell
+FIR0211,SUS0075,Arms Smuggling,IPC 120B,Pune,2026-08-13,Court Trial,PS North
+FIR0212,SUS0003,Cyber Fraud,PMLA 3,Ahmedabad,2026-02-18,Convicted,PS North
+FIR0213,SUS0066;SUS0063;SUS0022;SUS0110,Money Laundering,IPC 120B,Ahmedabad,2026-05-07,Closed,PS South
+FIR0214,SUS0011;SUS0142;SUS0144,Money Laundering,IPC 120B,Jaipur,2026-06-18,Under Investigation,PS North
+FIR0215,SUS0009;SUS0119,Money Laundering,IT Act 66C,Delhi,2026-06-10,Acquitted,PS South
+FIR0216,SUS0109;SUS0014,Money Laundering,IPC 384,Jaipur,2026-02-01,Acquitted,PS Central
+FIR0217,SUS0103;SUS0098,Human Trafficking,IPC 302,Surat,2026-02-20,Chargesheet Filed,PS North
+FIR0218,SUS0103;SUS0091;SUS0068,Human Trafficking,IPC 302,Indore,2026-01-01,Convicted,Cyber Cell
+FIR0219,SUS0091,Drug Trafficking,IPC 384,Nagpur,2026-03-12,Court Trial,PS North
+FIR0220,SUS0007;SUS0031,Money Laundering,IPC 376,Mumbai,2026-02-07,Convicted,PS South

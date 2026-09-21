@@ -1,0 +1,151 @@
+suspect_id,name,age,gender,city,gang_affiliation,role_in_network,primary_crime_type,risk_level,phone_number,prior_cases_count
+SUS0001,Priya Singh,20,M,Patna,GANG05,Courier,Extortion,High,+91-9826600539,5
+SUS0002,Suresh Patel,21,M,Delhi,GANG02,Courier,Drug Trafficking,Medium,+91-9868820204,5
+SUS0003,Sameer Chauhan,47,M,Surat,GANG05,Informant,Drug Trafficking,High,+91-9271432881,5
+SUS0004,Manoj Kumar,32,M,Ranchi,GANG06,Financier,Kidnapping,Low,+91-9469319644,4
+SUS0005,Rahul Shah,53,M,Mumbai,GANG07,Financier,Arms Smuggling,High,+91-9764130526,6
+SUS0006,Arjun Yadav,21,M,Nagpur,GANG04,Informant,Cyber Fraud,High,+91-9208449460,3
+SUS0007,Priya Nair,29,F,Kanpur,GANG06,Courier,Arms Smuggling,High,+91-9833953718,5
+SUS0008,Priya Mehta,53,M,Patna,GANG04,Courier,Kidnapping,Low,+91-9787194506,5
+SUS0009,Neha Reddy,22,M,Jaipur,GANG01,Informant,Kidnapping,Low,+91-9326541099,4
+SUS0010,Karan Gupta,50,M,Bhopal,GANG11,Enforcer,Arms Smuggling,Low,+91-9899925830,4
+SUS0011,Pooja Patel,44,F,Kanpur,GANG04,Unknown,Extortion,Medium,+91-9197613238,6
+SUS0012,Vikram Kumar,29,M,Ranchi,GANG11,Enforcer,Cyber Fraud,Medium,+91-9739830322,3
+SUS0013,Gaurav Sharma,26,M,Nagpur,GANG09,Informant,Money Laundering,Low,+91-9566825638,1
+SUS0014,Pooja Rathore,51,M,Ranchi,GANG03,Associate,Cyber Fraud,High,+91-9420452650,6
+SUS0015,Yash Gupta,28,F,Kanpur,GANG03,Associate,Drug Trafficking,Medium,+91-9624636385,0
+SUS0016,Nitin Malik,34,F,Delhi,GANG04,Unknown,Cyber Fraud,Low,+91-9621828280,6
+SUS0017,Kavita Iyer,27,M,Pune,GANG11,Enforcer,Extortion,Low,+91-9751325257,3
+SUS0018,Gaurav Gupta,38,M,Bhopal,GANG11,Associate,Organized Robbery,High,+91-9584779555,0
+SUS0019,Suresh Reddy,20,F,Surat,GANG09,Courier,Human Trafficking,Low,+91-9860038427,5
+SUS0020,Suresh Verma,40,M,Mumbai,GANG09,Courier,Organized Robbery,Low,+91-9242068763,5
+SUS0021,Rakesh Khan,34,M,Ranchi,GANG08,Informant,Human Trafficking,Low,+91-9807577342,3
+SUS0022,Sameer Shah,22,M,Nagpur,GANG11,Unknown,Cyber Fraud,Low,+91-9881913386,2
+SUS0023,Vikram Chauhan,31,M,Jaipur,GANG09,Enforcer,Kidnapping,Low,+91-9596743109,1
+SUS0024,Suresh Shah,54,M,Mumbai,GANG01,Associate,Drug Trafficking,Critical,+91-9909134796,6
+SUS0025,Sameer Khan,49,M,Jaipur,GANG07,Unknown,Extortion,Medium,+91-9519212169,2
+SUS0026,Sunita Shah,37,M,Bhopal,GANG12,Unknown,Organized Robbery,Low,+91-9418587604,1
+SUS0027,Rakesh Iyer,22,F,Patna,GANG06,Financier,Organized Robbery,Medium,+91-9670292350,1
+SUS0028,Anil Yadav,30,M,Mumbai,GANG10,Financier,Human Trafficking,Medium,+91-9711684318,1
+SUS0029,Rahul Yadav,45,M,Nagpur,GANG10,Associate,Money Laundering,Critical,+91-9319321646,5
+SUS0030,Deepak Rathore,44,F,Pune,GANG11,Associate,Organized Robbery,Medium,+91-9907308348,0
+SUS0031,Yash Singh,23,M,Ahmedabad,GANG04,Associate,Extortion,Critical,+91-9173864104,1
+SUS0032,Sanjay Shah,53,M,Patna,GANG05,Associate,Drug Trafficking,High,+91-9695499669,2
+SUS0033,Vikram Kumar,35,M,Mumbai,GANG02,Associate,Extortion,Low,+91-9749431082,1
+SUS0034,Arjun Rathore,51,M,Indore,GANG05,Unknown,Drug Trafficking,Low,+91-9554811020,6
+SUS0035,Amit Reddy,27,F,Nagpur,GANG05,Courier,Organized Robbery,Medium,+91-9559225330,4
+SUS0036,Suresh Kumar,53,M,Delhi,GANG06,Associate,Extortion,Medium,+91-9144913399,2
+SUS0037,Sunita Verma,41,M,Jaipur,GANG11,Courier,Cyber Fraud,Medium,+91-9701170349,6
+SUS0038,Yash Kumar,34,M,Chandigarh,GANG03,Unknown,Extortion,High,+91-9126614158,1
+SUS0039,Karan Patel,34,M,Lucknow,GANG03,Informant,Cyber Fraud,Medium,+91-9141580226,6
+SUS0040,Arjun Shah,41,F,Lucknow,GANG04,Courier,Human Trafficking,Medium,+91-9399147754,6
+SUS0041,Kavita Rathore,41,M,Nagpur,GANG09,Enforcer,Money Laundering,Critical,+91-9223847257,2
+SUS0042,Manoj Verma,25,M,Surat,GANG07,Recruiter,Money Laundering,Medium,+91-9649136331,0
+SUS0043,Rakesh Gupta,35,M,Delhi,GANG12,Enforcer,Human Trafficking,Medium,+91-9175133802,5
+SUS0044,Yash Reddy,26,M,Patna,GANG05,Associate,Kidnapping,Medium,+91-9848621833,2
+SUS0045,Arjun Patel,43,M,Nagpur,GANG12,Unknown,Arms Smuggling,Medium,+91-9995205588,0
+SUS0046,Arjun Patel,39,M,Indore,GANG08,Enforcer,Human Trafficking,Medium,+91-9952266893,6
+SUS0047,Neha Yadav,37,M,Ahmedabad,GANG11,Associate,Money Laundering,Low,+91-9906528433,1
+SUS0048,Deepak Gupta,28,M,Delhi,GANG01,Courier,Organized Robbery,Medium,+91-9925159146,0
+SUS0049,Priya Gupta,43,M,Indore,GANG07,Courier,Drug Trafficking,High,+91-9926830795,0
+SUS0050,Deepak Mehta,52,M,Indore,GANG01,Associate,Cyber Fraud,Medium,+91-9960514523,3
+SUS0051,Gaurav Reddy,47,M,Surat,GANG12,Unknown,Kidnapping,High,+91-9688273030,3
+SUS0052,Pooja Khan,47,M,Lucknow,GANG04,Informant,Arms Smuggling,High,+91-9659741412,3
+SUS0053,Manoj Shah,23,F,Patna,GANG05,Courier,Money Laundering,Medium,+91-9679984033,0
+SUS0054,Deepak Joshi,28,F,Patna,GANG04,Financier,Kidnapping,Medium,+91-9600282414,3
+SUS0055,Meena Patel,43,M,Amritsar,GANG10,Unknown,Drug Trafficking,High,+91-9922050912,4
+SUS0056,Amit Nair,38,M,Ranchi,GANG07,Unknown,Kidnapping,Medium,+91-9888807316,4
+SUS0057,Deepak Khan,33,M,Lucknow,GANG07,Enforcer,Kidnapping,Medium,+91-9829223044,6
+SUS0058,Sanjay Shah,27,F,Surat,GANG09,Kingpin,Kidnapping,Medium,+91-9811890569,0
+SUS0059,Sameer Kumar,48,M,Pune,GANG01,Courier,Money Laundering,Low,+91-9450948014,2
+SUS0060,Pankaj Rathore,45,M,Lucknow,GANG02,Enforcer,Drug Trafficking,Critical,+91-9475767056,1
+SUS0061,Kavita Verma,20,F,Jaipur,GANG04,Informant,Extortion,Low,+91-9608482316,5
+SUS0062,Arjun Shah,35,F,Ranchi,GANG06,Courier,Cyber Fraud,High,+91-9275842194,2
+SUS0063,Amit Malik,55,M,Nagpur,GANG07,Enforcer,Human Trafficking,Low,+91-9841541582,6
+SUS0064,Vikram Malik,26,F,Ranchi,GANG10,Informant,Money Laundering,Medium,+91-9810303128,2
+SUS0065,Priya Reddy,19,M,Chandigarh,GANG07,Informant,Cyber Fraud,Medium,+91-9488896443,5
+SUS0066,Ajay Kumar,46,M,Pune,GANG12,Associate,Arms Smuggling,Medium,+91-9677858758,6
+SUS0067,Sameer Rathore,39,M,Chandigarh,GANG04,Informant,Cyber Fraud,Low,+91-9584044963,1
+SUS0068,Rakesh Joshi,40,M,Delhi,GANG08,Unknown,Extortion,Medium,+91-9480990401,6
+SUS0069,Manoj Rathore,54,M,Delhi,GANG09,Unknown,Cyber Fraud,Low,+91-9536398872,3
+SUS0070,Deepak Khan,50,M,Indore,GANG01,Financier,Human Trafficking,Medium,+91-9361246928,2
+SUS0071,Nitin Khan,54,M,Ahmedabad,GANG06,Enforcer,Money Laundering,Medium,+91-9587205269,2
+SUS0072,Deepak Singh,31,M,Kanpur,GANG02,Associate,Extortion,Low,+91-9893070706,3
+SUS0073,Rakesh Das,37,M,Mumbai,GANG04,Recruiter,Money Laundering,Low,+91-9115191689,5
+SUS0074,Manoj Verma,22,F,Ahmedabad,GANG05,Associate,Extortion,Medium,+91-9908304440,3
+SUS0075,Amit Malik,49,M,Indore,GANG08,Recruiter,Drug Trafficking,Low,+91-9612957813,0
+SUS0076,Pankaj Khan,23,F,Surat,GANG11,Associate,Extortion,Low,+91-9704344408,2
+SUS0077,Deepak Singh,54,M,Ranchi,GANG07,Associate,Human Trafficking,High,+91-9508427798,3
+SUS0078,Ravi Patel,38,M,Surat,GANG10,Financier,Cyber Fraud,Critical,+91-9323110563,5
+SUS0079,Neha Yadav,29,M,Jaipur,GANG03,Associate,Extortion,Low,+91-9583724666,5
+SUS0080,Ravi Verma,33,M,Lucknow,GANG12,Recruiter,Organized Robbery,Low,+91-9350636897,2
+SUS0081,Priya Gupta,46,F,Mumbai,GANG09,Courier,Extortion,Critical,+91-9987588450,1
+SUS0082,Sanjay Malik,55,M,Amritsar,GANG05,Enforcer,Organized Robbery,High,+91-9851333320,3
+SUS0083,Anil Iyer,50,F,Indore,GANG02,Associate,Kidnapping,High,+91-9748232591,2
+SUS0084,Deepak Sharma,36,M,Surat,GANG01,Informant,Extortion,Medium,+91-9799552991,3
+SUS0085,Sanjay Patel,50,M,Mumbai,GANG08,Recruiter,Money Laundering,Medium,+91-9212313264,6
+SUS0086,Sameer Khan,37,M,Nagpur,GANG07,Informant,Drug Trafficking,Medium,+91-9437710224,2
+SUS0087,Kavita Joshi,51,M,Chandigarh,GANG01,Associate,Organized Robbery,Medium,+91-9301415220,4
+SUS0088,Kavita Khan,47,M,Ranchi,GANG01,Courier,Extortion,Critical,+91-9570423569,5
+SUS0089,Amit Chauhan,29,M,Lucknow,GANG09,Kingpin,Kidnapping,Low,+91-9221827951,3
+SUS0090,Priya Kumar,50,M,Amritsar,GANG12,Recruiter,Arms Smuggling,Medium,+91-9618079974,3
+SUS0091,Gaurav Kumar,43,M,Jaipur,GANG10,Associate,Extortion,High,+91-9396618390,6
+SUS0092,Sameer Reddy,51,M,Lucknow,GANG01,Recruiter,Arms Smuggling,High,+91-9722687986,5
+SUS0093,Rohan Shah,53,M,Indore,GANG06,Recruiter,Kidnapping,Medium,+91-9445505799,6
+SUS0094,Anjali Chauhan,55,M,Bhopal,GANG04,Unknown,Kidnapping,Low,+91-9899621068,3
+SUS0095,Sunita Joshi,43,M,Nagpur,GANG11,Unknown,Organized Robbery,Critical,+91-9235555899,4
+SUS0096,Karan Singh,47,M,Mumbai,GANG09,Unknown,Drug Trafficking,High,+91-9540211187,6
+SUS0097,Rohan Yadav,49,M,Ranchi,GANG05,Recruiter,Kidnapping,Medium,+91-9452794611,6
+SUS0098,Gaurav Joshi,39,F,Nagpur,GANG12,Unknown,Organized Robbery,High,+91-9138546365,4
+SUS0099,Priya Malik,33,F,Patna,GANG02,Enforcer,Cyber Fraud,High,+91-9855797020,6
+SUS0100,Sanjay Malik,20,M,Delhi,GANG06,Informant,Arms Smuggling,Medium,+91-9562446417,1
+SUS0101,Sameer Mehta,29,M,Pune,GANG02,Associate,Kidnapping,Medium,+91-9358589021,3
+SUS0102,Rohan Chauhan,48,M,Nagpur,GANG05,Enforcer,Drug Trafficking,High,+91-9599561877,2
+SUS0103,Sanjay Yadav,47,M,Kanpur,GANG10,Recruiter,Kidnapping,High,+91-9590523712,6
+SUS0104,Pankaj Khan,25,M,Jaipur,GANG07,Associate,Arms Smuggling,Critical,+91-9417001612,0
+SUS0105,Neha Joshi,36,M,Delhi,GANG10,Unknown,Drug Trafficking,Critical,+91-9900122509,3
+SUS0106,Ravi Chauhan,41,M,Jaipur,GANG11,Courier,Arms Smuggling,High,+91-9874090950,6
+SUS0107,Meena Kumar,25,M,Amritsar,GANG11,Associate,Arms Smuggling,High,+91-9135824891,4
+SUS0108,Rohan Yadav,37,M,Kanpur,GANG12,Enforcer,Human Trafficking,Low,+91-9679184667,2
+SUS0109,Manoj Mehta,35,F,Amritsar,GANG08,Unknown,Arms Smuggling,High,+91-9463692735,6
+SUS0110,Suresh Kumar,33,M,Chandigarh,GANG11,Associate,Kidnapping,Critical,+91-9963919401,4
+SUS0111,Sunita Joshi,19,M,Lucknow,GANG09,Financier,Money Laundering,High,+91-9821920438,2
+SUS0112,Meena Nair,25,F,Nagpur,GANG04,Enforcer,Money Laundering,Critical,+91-9337691219,5
+SUS0113,Meena Shah,38,F,Nagpur,GANG07,Financier,Drug Trafficking,Critical,+91-9426808977,3
+SUS0114,Deepak Iyer,27,M,Bhopal,GANG08,Recruiter,Kidnapping,Medium,+91-9880179899,1
+SUS0115,Priya Singh,50,M,Surat,GANG07,Unknown,Arms Smuggling,Low,+91-9497853519,1
+SUS0116,Deepak Nair,25,M,Nagpur,GANG06,Associate,Money Laundering,Low,+91-9396225446,1
+SUS0117,Divya Shah,24,M,Nagpur,GANG04,Associate,Drug Trafficking,Low,+91-9458102728,1
+SUS0118,Sunita Gupta,23,M,Chandigarh,GANG09,Courier,Human Trafficking,High,+91-9350180427,2
+SUS0119,Sunita Sharma,36,M,Chandigarh,GANG03,Unknown,Arms Smuggling,High,+91-9218032515,5
+SUS0120,Rohan Sharma,41,M,Ranchi,GANG04,Associate,Drug Trafficking,Low,+91-9156263020,1
+SUS0121,Anil Singh,23,F,Indore,GANG08,Informant,Cyber Fraud,Medium,+91-9337887233,4
+SUS0122,Sunita Das,38,M,Indore,GANG11,Unknown,Drug Trafficking,Critical,+91-9531233244,3
+SUS0123,Vivek Shah,23,M,Amritsar,GANG02,Recruiter,Extortion,Low,+91-9395296179,4
+SUS0124,Gaurav Reddy,43,M,Surat,GANG09,Recruiter,Kidnapping,Low,+91-9853529912,0
+SUS0125,Priya Iyer,32,M,Bhopal,GANG08,Unknown,Kidnapping,Medium,+91-9586940738,3
+SUS0126,Vikram Reddy,46,F,Kanpur,GANG11,Courier,Extortion,High,+91-9609241268,0
+SUS0127,Suresh Yadav,46,M,Mumbai,GANG12,Associate,Extortion,Medium,+91-9729712082,4
+SUS0128,Neha Singh,45,M,Kanpur,GANG11,Unknown,Kidnapping,High,+91-9874233009,0
+SUS0129,Yash Malik,41,F,Mumbai,GANG10,Associate,Extortion,High,+91-9340781088,6
+SUS0130,Divya Iyer,42,M,Mumbai,GANG05,Associate,Kidnapping,High,+91-9924024405,6
+SUS0131,Neha Iyer,20,M,Surat,GANG11,Informant,Arms Smuggling,Low,+91-9393421844,5
+SUS0132,Karan Nair,19,M,Pune,GANG03,Associate,Kidnapping,Low,+91-9895609471,5
+SUS0133,Suresh Das,32,M,Bhopal,GANG07,Enforcer,Extortion,Medium,+91-9874807770,2
+SUS0134,Rakesh Yadav,22,M,Pune,GANG03,Informant,Drug Trafficking,High,+91-9392168202,3
+SUS0135,Vivek Shah,45,M,Lucknow,GANG04,Informant,Cyber Fraud,Medium,+91-9219066986,2
+SUS0136,Rakesh Khan,52,M,Nagpur,GANG05,Kingpin,Kidnapping,Critical,+91-9158821683,0
+SUS0137,Arjun Kumar,35,M,Lucknow,GANG06,Financier,Organized Robbery,High,+91-9288650860,1
+SUS0138,Anjali Chauhan,51,M,Ahmedabad,GANG11,Informant,Cyber Fraud,Medium,+91-9896760809,0
+SUS0139,Ajay Yadav,39,M,Surat,GANG07,Associate,Kidnapping,Low,+91-9534900128,0
+SUS0140,Sanjay Shah,42,F,Mumbai,GANG07,Informant,Human Trafficking,Medium,+91-9529979713,4
+SUS0141,Divya Malik,40,M,Jaipur,GANG06,Informant,Cyber Fraud,Medium,+91-9222435172,4
+SUS0142,Kavita Nair,41,M,Patna,GANG11,Informant,Human Trafficking,Low,+91-9374843786,1
+SUS0143,Rohan Yadav,30,M,Ranchi,GANG11,Enforcer,Organized Robbery,High,+91-9706118438,5
+SUS0144,Yash Reddy,39,M,Pune,GANG08,Financier,Organized Robbery,Medium,+91-9955052486,2
+SUS0145,Nitin Das,23,M,Lucknow,GANG08,Enforcer,Drug Trafficking,Medium,+91-9408246619,0
+SUS0146,Divya Yadav,51,M,Bhopal,GANG08,Associate,Drug Trafficking,Medium,+91-9969533218,4
+SUS0147,Karan Khan,51,M,Pune,GANG01,Enforcer,Money Laundering,Critical,+91-9190547712,4
+SUS0148,Rahul Chauhan,47,M,Indore,GANG09,Associate,Extortion,Medium,+91-9403754671,3
+SUS0149,Karan Verma,40,M,Mumbai,GANG06,Financier,Kidnapping,Low,+91-9877103091,6
+SUS0150,Yash Kumar,40,M,Mumbai,GANG10,Associate,Money Laundering,Medium,+91-9804433388,5

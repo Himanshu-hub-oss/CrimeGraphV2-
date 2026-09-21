@@ -1,0 +1,1249 @@
+================================================================================
+        CRIMEGRAPH AI — ZERO TO HERO COMPLETE PROJECT DOCUMENTATION
+        AI-Powered Criminal Network Analysis System
+        1000% Comprehensive Technical & Conceptual Guide
+        Smart India Hackathon (SIH) 2026 | Blockchain & Cybersecurity
+================================================================================
+
+
+################################################################################
+PART 1: PROBLEM STATEMENT — KYUN BANAYA YE PROJECT?
+################################################################################
+
+REAL-WORLD PROBLEM:
+-------------------
+India mein law enforcement agencies (Police, CBI, NIA, Cyber Cell) ke paas 
+criminal data MULTIPLE jagah bikhra hua hota hai:
+
+1. FIR Records → Police station ke database mein
+2. CDR (Call Detail Records) → Telecom company ke server pe
+3. Financial Transactions → Banks aur hawala networks mein
+4. Social Media Posts → Twitter, Telegram, Dark Web pe
+5. Suspect Profiles → Alag-alag thane ke records mein
+
+PROBLEM: Ek investigating officer ko ye saara data manually connect karna padta 
+hai. Agar koi criminal SUS0024 (Suresh Shah) hai aur wo SUS0104 se secretly 
+connected hai through 3 intermediaries, toh manually ye pata lagana IMPOSSIBLE 
+hai jab 150+ suspects, 2000+ calls, 500+ interactions hain.
+
+MANUAL ANALYSIS KI LIMITATIONS:
+- Bahut slow hai (weeks/months lag jaate hain)
+- Human error hota hai (connections miss ho jaate hain)
+- Hidden patterns nahi dikhte (indirect criminal links)
+- Evidence tamper ho sakta hai (digital records change kar sakte hain)
+- Reactive policing hoti hai (crime hone ke BAAD action)
+
+HAMARA SOLUTION — CRIMEGRAPH AI:
+- AI se automatically criminal networks ko MAP karo
+- ML models se PREDICT karo kaun high risk hai
+- Graph analytics se HIDDEN connections dhundho
+- Blockchain se digital evidence TAMPER-PROOF banao
+- Dashboard se sab kuch EK JAGAH dekhoo
+
+
+################################################################################
+PART 2: PROJECT STRUCTURE — KYA KYA FILES HAIN?
+################################################################################
+
+F:/Ai powered criminal analysis/
+│
+├── app.py                              ← Main Streamlit Dashboard (754 lines)
+│                                          Ye file browser mein poora UI render karti hai
+│                                          10 tabs hain isme — aage detail mein bataunga
+│
+├── README.md                           ← Project overview documentation
+│
+├── data/                               ← SAARA RAW DATA YAHAN HAI (7 CSV files)
+│   ├── suspects.csv                    ← 150 suspects ka profile data
+│   ├── fir_records.csv                 ← 220 FIR case records
+│   ├── cdr_records.csv                 ← 2,000 call detail records
+│   ├── network_edges.csv              ← 500 interaction edges (kaun kisse connected)
+│   ├── social_media_posts.csv         ← 600 social media posts
+│   ├── suspect_features_enriched.csv  ← 150 suspects ka enriched feature matrix
+│   └── suspect_risk_predictions.csv   ← Risk predictions data
+│
+├── src/                                ← SAARA BACKEND CODE YAHAN HAI
+│   ├── __init__.py                     ← Python package initializer
+│   ├── data_processor.py              ← Data loading, cleaning, KPI calculation
+│   ├── graph_engine.py                ← Graph analytics, centrality, kingpin detection
+│   ├── blockchain_engine.py           ← Blockchain evidence chain of custody
+│   ├── ml_models.py                   ← 3 ML models (Risk, Link, NLP)
+│   └── train_models.py               ← Training pipeline — models yahan se train hote hain
+│
+├── models/                             ← TRAINED MODELS YAHAN SAVE HOTE HAIN (.joblib)
+│   ├── risk_model.joblib              ← Trained Risk Classifier model
+│   ├── risk_scaler.joblib             ← Feature scaler for risk model
+│   ├── risk_encoder.joblib            ← Label encoder (Low/Medium/High/Critical → 0/1/2/3)
+│   ├── risk_feature_cols.joblib       ← Feature column names list
+│   ├── link_model.joblib              ← Trained Link Predictor model
+│   ├── link_scaler.joblib             ← Feature scaler for link model
+│   ├── nlp_model.joblib               ← Trained NLP Threat Classifier
+│   ├── nlp_vectorizer.joblib          ← TF-IDF vectorizer (text → numbers)
+│   └── nlp_encoder.joblib            ← Label encoder for sentiment categories
+│
+└── docs/
+    └── SIH_Presentation_Pack.md       ← 10-slide SIH presentation deck
+
+
+################################################################################
+PART 3: DATA — KYA DATA HAI AUR KAISE USE HOTA HAI?
+################################################################################
+
+=== FILE 1: suspects.csv (150 rows) ===
+Ye file mein har criminal suspect ka profile hai.
+
+Columns:
+- suspect_id      : Unique ID (SUS0001, SUS0002, ..., SUS0150)
+- name            : Suspect ka naam (Priya Singh, Suresh Patel, etc.)
+- age             : Umar (18-65)
+- gender          : Male / Female
+- city            : Kahan rehta hai (Delhi, Mumbai, Pune, Jaipur, etc.)
+- phone_number    : Phone number
+- gang_affiliation: Kis gang ka member hai (GANG01 to GANG12)
+- role_in_network : Network mein kya role hai:
+                    - Kingpin    = Boss (sabse powerful)
+                    - Enforcer   = Muscle/Violence ka kaam
+                    - Financier  = Paisa manage karta hai
+                    - Courier    = Maal deliver karta hai
+                    - Informant  = Information deta hai
+                    - Operative  = Field worker
+- primary_crime_type : Kya crime karta hai:
+                       - Drug Trafficking, Money Laundering, Cybercrime,
+                       - Arms Dealing, Extortion, Human Trafficking, etc.
+- risk_level      : Kitna dangerous hai:
+                    - Critical (sabse zyada khatra)
+                    - High
+                    - Medium
+                    - Low
+- prior_cases_count: Pehle kitne cases mein pakda gaya
+
+KAISE USE HOTA HAI:
+→ data_processor.py ise load karta hai
+→ graph_engine.py ise nodes banane mein use karta hai (har suspect = ek node)
+→ ml_models.py ise training features ke liye use karta hai
+→ app.py ise dashboard pe dikhata hai
+
+
+=== FILE 2: fir_records.csv (220 rows) ===
+Ye file mein har FIR (First Information Report) ka record hai.
+
+Columns:
+- fir_id              : Unique FIR number (FIR0001, FIR0002, ...)
+- crime_type          : Kya crime hua
+- ipc_section         : Kaunsi IPC/IT Act section lagi
+- date_filed          : Kab FIR file hui
+- city                : Kahan hua crime
+- accused_suspect_ids : Kaun kaun accused hain (semicolon-separated)
+                        Example: "SUS0036;SUS0022;SUS0122"
+                        Matlab ye 3 log EK SAATH accused hain → CO-ACCUSED relationship
+- status              : Under Investigation / Chargesheet Filed / Convicted / Acquitted
+
+KAISE USE HOTA HAI:
+→ data_processor.py se FIR count per suspect calculate hota hai
+→ graph_engine.py mein accused_suspect_ids se CO-ACCUSED EDGES bante hain
+   Agar SUS0036, SUS0022, SUS0122 ek FIR mein saath hain, toh:
+   SUS0036 ↔ SUS0022 (edge with weight 2.0)
+   SUS0036 ↔ SUS0122 (edge with weight 2.0)
+   SUS0022 ↔ SUS0122 (edge with weight 2.0)
+→ blockchain_engine.py mein FIR evidence blocks bante hain
+
+
+=== FILE 3: cdr_records.csv (2,000 rows) ===
+CDR = Call Detail Records. Ye police ko telecom company se milta hai.
+
+Columns:
+- call_id           : Unique call ID
+- caller_id         : Kisne call kiya (SUS0001, etc.)
+- callee_id         : Kisko call kiya
+- timestamp         : Kab call hua
+- duration_seconds  : Kitni der baat hui
+- call_type         : Voice / SMS / Data
+- cell_tower_city   : Kis city ke tower se call hua
+
+KAISE USE HOTA HAI:
+→ graph_engine.py mein CDR se CALL EDGES bante hain:
+   Agar SUS0034 ne SUS0074 ko 10 baar call kiya, toh:
+   Edge weight = 10 * 0.5 = 5.0 (CDR edges ka weight 0.5 per call)
+→ data_processor.py mein call_count calculate hota hai per suspect
+→ app.py mein CDR timeline chart banta hai (daily call activity)
+→ Dossier mein recent calls dikhte hain
+
+
+=== FILE 4: network_edges.csv (500 rows) ===
+Ye file known criminal interactions ka record hai.
+
+Columns:
+- edge_id               : Unique edge ID
+- source_suspect_id     : Pehla suspect
+- target_suspect_id     : Dusra suspect
+- interaction_weight    : Kitni strong connection hai (1.0 to 10.0)
+- edge_type             : Connection ka type:
+                          - Financial+Call : Paisa + phone connection
+                          - Mixed         : Multiple type ki interactions
+                          - Call          : Sirf phone connection
+
+KAISE USE HOTA HAI:
+→ graph_engine.py mein ye DIRECT EDGES bante hain graph mein
+→ ml_models.py mein link predictor training ke liye positive pairs bante hain
+
+
+=== FILE 5: social_media_posts.csv (600 rows) ===
+Social media intelligence — intercepted posts from suspects.
+
+Columns:
+- post_id           : Unique post ID
+- suspect_id        : Kisne post kiya
+- platform          : Twitter/X, Telegram, Instagram, WhatsApp Status, Facebook
+- post_text         : Kya likha hai (English mein)
+                      Example: "New shipment arriving from border tonight, lay low"
+- post_date         : Kab post kiya
+- ai_sentiment_flag : AI ne kya classify kiya:
+                      - Neutral        : Normal post
+                      - Suspicious     : Shak hone wali cheez
+                      - Threatening    : Direct threat
+                      - Coded/Ambiguous: Code language mein baat
+- engagement_score  : Kitne logon ne interact kiya (likes, shares, etc.)
+
+KAISE USE HOTA HAI:
+→ ml_models.py mein NLP model train hota hai: post_text → ai_sentiment_flag predict
+→ app.py mein NLP Threat Monitor tab pe dikhta hai
+→ Dossier mein suspect ke posts dikhte hain
+
+
+=== FILE 6: suspect_features_enriched.csv (150 rows) ===
+Ye file mein har suspect ke liye 13 ENRICHED FEATURES hain jo ML model training
+ke liye use hote hain. Ye data multiple sources se aggregate karke banaya gaya hai.
+
+Key Columns (ML Features):
+- age                    : Suspect ki umar
+- prior_cases_count      : Pehle ke cases
+- fir_count              : Kitne FIRs mein accused hai
+- degree                 : Graph mein kitne connections hain
+- weighted_degree        : Connections ka weighted total
+- clustering_coeff       : Kitne neighbors aapas mein connected hain
+- betweenness            : Kitna "bridge" role hai network mein
+- eigenvector_centrality : Kitne powerful logon se connected hai
+- call_count             : Total CDR calls
+- total_sent_inr         : Kitna paisa bheja (INR)
+- total_received_inr     : Kitna paisa aaya (INR)
+- flagged_txn_count      : Kitne suspicious transactions
+- suspicious_post_count  : Kitne suspicious social media posts
+- risk_level             : TARGET LABEL (Low/Medium/High/Critical)
+
+KAISE USE HOTA HAI:
+→ ml_models.py mein Risk Classifier train hota hai:
+   X = 13 features
+   y = risk_level
+   Model seekhta hai ki KAUNSE features se risk level predict hota hai
+
+
+=== FILE 7: suspect_risk_predictions.csv (15 rows) ===
+Ye file mein kuch pre-computed risk predictions hain with community IDs.
+
+KAISE USE HOTA HAI:
+→ Reference data ke taur pe load hota hai
+
+
+################################################################################
+PART 4: src/data_processor.py — DATA INGESTION ENGINE
+################################################################################
+
+FILE: src/data_processor.py (217 lines)
+CLASS: DataProcessor
+
+YE KYA KARTA HAI:
+Ye class SAARA data load karti hai, clean karti hai, aur baaki modules ko
+ready-to-use DataFrames deti hai. Ye project ka FOUNDATION hai — bina iske
+koi bhi module kaam nahi karega.
+
+=== __init__(self, data_dir) ===
+Jab DataProcessor() call hota hai:
+1. data_dir set karta hai (default: project_root/data/)
+2. Saari 7 CSV files ko Pandas DataFrames mein load karta hai:
+   - self.suspects_df  = suspects.csv     (150 rows)
+   - self.fir_df       = fir_records.csv  (220 rows)
+   - self.cdr_df       = cdr_records.csv  (2000 rows)
+   - self.edges_df     = network_edges.csv (500 rows)
+   - self.posts_df     = social_media_posts.csv (600 rows)
+   - self.enriched_df  = suspect_features_enriched.csv (150 rows)
+   - self.predictions_df = suspect_risk_predictions.csv (15 rows)
+
+=== get_kpis(self) ===
+Executive dashboard ke liye high-level statistics return karta hai:
+- total_suspects: 150
+- active_gangs: 12 (unique gang affiliations)
+- critical_risk: Critical risk wale suspects ki count
+- high_risk: High risk wale suspects ki count
+- total_firs: 220
+- total_calls: 2000
+- total_network_edges: 500
+- flagged_threat_posts: Threatening + Suspicious + Coded posts ki count
+
+=== get_gang_summary(self) ===
+Har gang ke baare mein detailed summary banaata hai:
+- members_count: Kitne members hain
+- critical_suspects: Kitne Critical risk wale
+- high_suspects: Kitne High risk wale
+- top_crime_type: Sabse common crime type
+- avg_prior_cases: Average prior cases
+- kingpins: Kaun kaun Kingpin hai
+- enforcers_count: Kitne Enforcers
+- financiers_count: Kitne Financiers
+
+=== get_city_crime_hotspots(self) ===
+Har city ke liye crime severity calculate karta hai:
+- fir_count: Kitne FIRs us city mein
+- suspect_count: Kitne suspects us city mein
+- cdr_activity_count: Kitne calls us city ke towers se
+- lat, lon: City ke coordinates (map pe dikhane ke liye)
+- severity_score = (fir_count * 3) + (suspect_count * 2) + (cdr_count * 0.1)
+  FIRs ko zyada weight diya hai kyunki wo confirmed crimes hain.
+
+=== get_suspect_dossier(self, suspect_id) ===
+Ek suspect ka COMPLETE intelligence dossier compile karta hai:
+1. Profile data (name, age, gang, risk, etc.)
+2. Enriched features (graph metrics, financial data)
+3. Linked FIRs (kaunse cases mein accused hai)
+4. Co-accused list (kaunse suspects ke saath FIR mein hai)
+5. CDR call stats (total calls, unique contacts, recent calls)
+6. Social media posts (saare posts + threat count)
+7. Network edges (kaunse suspects se directly connected hai)
+
+
+################################################################################
+PART 5: src/graph_engine.py — GRAPH ANALYTICS ENGINE
+################################################################################
+
+FILE: src/graph_engine.py (400 lines)
+CLASS: CriminalGraphEngine
+LIBRARY: NetworkX (Python ka graph analysis library)
+
+YE KYA KARTA HAI:
+Ye class criminal suspect network ko ek MATHEMATICAL GRAPH mein convert karti hai.
+Graph mein:
+- NODE = Ek suspect (SUS0001, SUS0002, etc.)
+- EDGE = Do suspects ke beech connection (call, financial, co-accused)
+- WEIGHT = Connection kitni strong hai
+
+Result: 150 Nodes, 1,567 Edges ka ek complex criminal network
+
+=== STEP 1: build_graph(self) ===
+
+Ye method 4 sources se graph banata hai:
+
+SOURCE 1 — suspects.csv se NODES bante hain:
+Har suspect ek node hai jismein attributes hain:
+  - name, age, gender, city, gang, role, crime_type, risk_level, phone, prior_cases
+Code: self.G.add_node(suspect_id, name=..., age=..., gang=..., ...)
+
+SOURCE 2 — network_edges.csv se DIRECT EDGES bante hain:
+Agar SUS0010 aur SUS0045 ka known interaction hai with weight 7.5:
+  Edge: SUS0010 ↔ SUS0045, weight=7.5, type="Financial+Call"
+Agar pehle se edge hai toh weight ADD ho jaata hai (stronger connection)
+
+SOURCE 3 — fir_records.csv se CO-ACCUSED EDGES bante hain:
+Agar FIR mein accused = "SUS0036;SUS0022;SUS0122" hai, toh:
+  3 combinations bante hain: 36-22, 36-122, 22-122
+  Har pair ke beech weight 2.0 ka edge add hota hai
+  Type: "Co-Accused FIR"
+YE BAHUT IMPORTANT HAI kyunki ek FIR mein saath hona matlab definitely connected hain!
+
+SOURCE 4 — cdr_records.csv se CALL FREQUENCY EDGES bante hain:
+Pehle caller-callee pairs group hote hain, phir call count calculate hota hai.
+Agar SUS0034 ne SUS0074 ko 10 baar call kiya:
+  Edge weight += 10 * 0.5 = 5.0 add hota hai
+  Type: "CDR Call"
+0.5 multiplier isliye hai kyunki sirf call karna weak evidence hai compared to
+financial transaction ya co-accused hona.
+
+
+=== STEP 2: compute_all_metrics(self) ===
+
+Graph ban gaya — ab us par ANALYTICS chalte hain. Ye step har node ke liye 
+CENTRALITY METRICS calculate karta hai:
+
+METRIC 1 — DEGREE CENTRALITY:
+Kitne direct connections hain?
+Agar SUS0001 ke 20 connections hain, toh degree = 20.
+Simple but important — zyada connections = zyada involved.
+
+METRIC 2 — BETWEENNESS CENTRALITY (sabse important!):
+"Ye suspect kitne SHORTEST PATHS pe baitha hai?"
+Imagine karo SUS0003 ke bina, GANG01 aur GANG02 ke beech communication
+cut ho jayegi — toh SUS0003 ka betweenness bahut HIGH hoga.
+Ye BROKER/GATEKEEPER identify karta hai — jo log information flow control karte hain.
+Formula: BC(v) = Sum of (shortest paths through v / total shortest paths)
+
+METRIC 3 — EIGENVECTOR CENTRALITY:
+"Kya ye suspect POWERFUL logon se connected hai?"
+Agar SUS0005 ke 5 connections hain lekin wo 5 logon mein se 4 Kingpins hain,
+toh uska eigenvector bahut HIGH hoga.
+Ye "power by association" measure karta hai.
+
+METRIC 4 — PAGERANK:
+Google ka algorithm — jo page (suspect) pe zyada important pages (suspects)
+point karte hain, wo zyada important hai.
+Random walk probability ke basis pe calculate hota hai.
+
+METRIC 5 — CLOSENESS CENTRALITY:
+"Ye suspect average mein kitne steps mein sabse baat kar sakta hai?"
+Agar SUS0010 ko kisi bhi suspect tak 2-3 steps mein pahunchna hai,
+toh wo bahut "close" hai network ke center mein.
+
+METRIC 6 — CLUSTERING COEFFICIENT:
+"Ye suspect ke neighbors aapas mein kitne connected hain?"
+Agar SUS0010 ke 5 neighbors hain aur wo 5 logon mein se 4 aapas mein bhi
+connected hain → clustering coefficient HIGH.
+Ye tight-knit criminal cells identify karta hai.
+
+METRIC 7 — COMMUNITY DETECTION (Louvain Algorithm):
+Ye poore network ko SUB-GROUPS (communities) mein todta hai.
+Louvain algorithm MODULARITY maximize karta hai:
+- Same community ke andar zyada edges honi chahiye
+- Different communities ke beech kam edges honi chahiye
+Result: Har suspect ko ek community_id milta hai (0, 1, 2, 3, ...)
+Ye secretly operating sub-gangs ko identify karta hai jo official gang
+affiliation se different ho sakte hain.
+
+=== COMPOSITE KINGPIN SCORE (0-100) ===
+Sabse important metric — sab ka combination:
+kingpin_score = (betweenness * 35)     → 35% weight (broker role)
+              + (eigenvector * 35)      → 35% weight (powerful connections)
+              + (pagerank * 15)         → 15% weight (importance)
+              + (degree/20 * 10)        → 10% weight (connectivity)
+              + (prior_cases/6 * 5)     →  5% weight (criminal history)
+              * 100 scale
+
+Score 99.9 = Sabse powerful network kingpin
+Score 5.0  = Barely connected, low-level operative
+
+
+=== STEP 3: get_top_kingpins(top_n=15) ===
+Sabse high kingpin_score wale suspects return karta hai.
+Ye dashboard pe "Kingpin Analyzer" tab mein dikhta hai.
+
+=== STEP 4: find_shortest_criminal_path(source_id, target_id) ===
+Do suspects ke beech SHORTEST PATH dhundhta hai.
+Example: SUS0024 se SUS0104 tak kaise pahunchein?
+  SUS0024 → SUS0067 → SUS0031 → SUS0104
+  3 degrees of separation, 2 intermediaries
+Har hop pe connection type aur weight bhi batata hai.
+
+=== STEP 5: get_mutual_accomplices(suspect_a, suspect_b) ===
+Do suspects ke COMMON NEIGHBORS (mutual contacts) dhundhta hai.
+Ye link prediction mein bhi use hota hai.
+
+=== STEP 6: generate_pyvis_html() ===
+Pyvis library se INTERACTIVE 2D GRAPH generate karta hai:
+- Nodes color-coded by gang ya risk level
+- Node SIZE proportional to kingpin_score
+- Edges color-coded: Gold = Financial, Red = FIR, Gray = Call
+- Hover pe detailed tooltip dikhta hai
+- Physics-based force-directed layout (nodes repel, edges attract)
+- Zoom, drag, pan supported
+Output: HTML string jo Streamlit mein embed hota hai
+
+=== STEP 7: generate_plotly_3d_graph() ===
+Plotly se 3D SCATTER GRAPH generate karta hai:
+- Spring layout algorithm se 3D coordinates calculate hote hain
+- Nodes ka color = Kingpin Score (Inferno colorscale: low=purple, high=yellow)
+- Nodes ka size = Kingpin Score / 4
+- Edges = semi-transparent blue lines
+- Rotate karke 3D mein explore kar sakte ho
+
+
+################################################################################
+PART 6: src/blockchain_engine.py — BLOCKCHAIN EVIDENCE LAYER
+################################################################################
+
+FILE: src/blockchain_engine.py (273 lines)
+CLASSES: EvidenceBlock, EvidenceBlockchain
+
+YE KYA KARTA HAI:
+Digital evidence ko TAMPER-PROOF banata hai using SHA-256 cryptographic hashing.
+Court mein evidence tabhi admissible hota hai jab prove ho ki kisi ne modify
+nahi kiya — blockchain ye guarantee deta hai.
+
+=== BLOCKCHAIN KAISE KAAM KARTA HAI? (Simple Explanation) ===
+
+Imagine karo ek CHAIN OF BOXES:
+
+Box 0 (Genesis) → Box 1 → Box 2 → Box 3 → Box 4 → Box 5
+  |                 |        |        |        |        |
+  HASH_0          HASH_1   HASH_2   HASH_3   HASH_4   HASH_5
+  |                 |        |        |        |        |
+  prev=000...     prev=     prev=    prev=    prev=    prev=
+                  HASH_0    HASH_1   HASH_2   HASH_3   HASH_4
+
+Har box mein:
+1. Evidence data hai (FIR record, CDR log, social media post, etc.)
+2. Evidence ka SHA-256 HASH hai (64-character fingerprint)
+3. PREVIOUS BOX ka hash hai
+4. Apna BLOCK HASH hai (sab combine karke)
+
+Ab agar koi ATTACKER Box 2 ka data change kare:
+- Box 2 ka evidence_hash change ho jayega
+- Box 2 ka block_hash change ho jayega
+- Lekin Box 3 mein previous_hash = Box 2 ka OLD hash hai
+- MISMATCH! → Tampering detected! 
+
+=== CLASS: EvidenceBlock ===
+
+Ek single block represent karta hai:
+
+Fields:
+- index          : Block number (0, 1, 2, ...)
+- timestamp      : Kab register hua
+- evidence_id    : Evidence ka unique ID (EVID_FIR_0001, etc.)
+- evidence_type  : Kya type ka evidence hai (FIR Record, CDR Call Log, etc.)
+- case_id        : Kis FIR case se related hai
+- payload        : ACTUAL EVIDENCE DATA (dict/string)
+- officer_badge  : Kis officer ne register kiya
+- police_station : Kis police station se
+- authorized_role: Kis role ke under registered (Smart Contract check)
+- previous_hash  : Previous block ka hash (CHAIN LINK)
+- evidence_hash  : Payload ka SHA-256 hash (EVIDENCE FINGERPRINT)
+- merkle_root    : Evidence ID + Case ID + Officer + Evidence Hash ka combined hash
+- block_hash     : Index + Timestamp + Merkle Root + Previous Hash ka combined hash
+
+HASHING FUNCTIONS:
+1. calculate_evidence_hash(payload):
+   payload → JSON string → SHA-256 → 64-char hex string
+   Example: {"accused": ["SUS0036"]} → "a3f8c2d1e5..."
+
+2. calculate_merkle_root():
+   MERKLE TREE banata hai:
+                 [Merkle Root]
+                /             \
+        [Hash(1+2)]         [Evidence Hash]
+        /         \
+   [Hash(EVID:CASE)]  [Hash(OFFICER:STATION)]
+   
+   4 leaves combine hokar 1 root banta hai — isse INDIVIDUAL leaf 
+   ka tampering bhi detect ho jaata hai.
+
+3. calculate_block_hash():
+   f"{index}{timestamp}{merkle_root}{previous_hash}{role}" → SHA-256
+   Ye BLOCK SIGNATURE hai — agar kuch bhi change ho, ye change ho jayega.
+
+
+=== CLASS: EvidenceBlockchain ===
+
+SMART CONTRACT ACCESS CONTROL:
+Kaun kya register kar sakta hai — ye rules hain:
+
+ROLE_INVESTIGATING_OFFICER → FIR Record, Arrest Memo, Confession Audio, Seizure Memo
+ROLE_CYBER_CELL            → CDR Call Log, Social Media Threat Post, IP Wiretap Dump
+ROLE_FORENSIC_EXPERT       → Ballistics Report, Digital Device Clone, DNA Report, Financial Ledger
+ROLE_MAGISTRATE_JUDGE      → Judicial Warrant, Court Evidence Seal, Trial Ruling Record
+
+Agar INVESTIGATING_OFFICER CDR Call Log register karne ki koshish kare:
+→ Permission mismatch → EMERGENCY_OVERRIDE flag lagta hai (audit trail)
+
+SEEDED BLOCKS (6 blocks initially):
+Block 0: Genesis (system root)
+Block 1: FIR Evidence — FIR0001 ke accused SUS0036, SUS0022, SUS0122
+Block 2: CDR Wiretap — SUS0034 ne SUS0074 ko 266 sec call kiya
+Block 3: Social Media Threat — SUS0032 ka Twitter post "Big deal coming"
+Block 4: Financial Ledger — SUS0088 se SUS0147 ko 47 lakh transfer
+Block 5: Seizure Memo — SUS0115 se 9mm pistol, fake passport, encrypted phone
+
+verify_chain_integrity():
+POORA CHAIN traverse karke har block ka:
+1. previous_hash check karta hai (kya previous block ka hash match karta hai?)
+2. evidence_hash recalculate karta hai (kya payload change hua hai?)
+3. block_hash recalculate karta hai (kya block metadata change hua hai?)
+Agar koi mismatch → TAMPERED block report karta hai
+
+simulate_tampering_attack(block_index):
+DEMO PURPOSE ke liye — ek block ka payload directly modify karta hai
+WITHOUT re-mining (hash update nahi karta).
+Phir verify_chain_integrity() chalao → wo detect kar lega!
+
+
+################################################################################
+PART 7: src/ml_models.py — AI/ML PREDICTION ENGINE
+################################################################################
+
+FILE: src/ml_models.py (326 lines)
+CLASS: MLPredictorSuite
+LIBRARY: Scikit-Learn (Python ka ML library)
+
+YE 3 MODELS TRAIN KARTA HAI:
+
+═══════════════════════════════════════════════════
+MODEL 1: SUSPECT RISK LEVEL CLASSIFIER
+═══════════════════════════════════════════════════
+
+PURPOSE: Har suspect ke liye predict karo — Low, Medium, High, ya Critical risk?
+
+ALGORITHM: Random Forest Classifier
+- 150 Decision Trees
+- Max Depth: 8
+- Class Weight: Balanced (minority classes ko zyada importance)
+
+INPUT (13 Features):
+┌─────────────────────────┬──────────────────────────────────────────────────┐
+│ Feature                 │ Kya Measure Karta Hai                            │
+├─────────────────────────┼──────────────────────────────────────────────────┤
+│ age                     │ Suspect ki umar                                  │
+│ prior_cases_count       │ Pehle kitne criminal cases                       │
+│ fir_count               │ Kitne FIRs mein accused                          │
+│ degree                  │ Graph mein kitne direct connections               │
+│ weighted_degree         │ Connections ka total weight                       │
+│ clustering_coeff        │ Neighbors aapas mein kitne connected              │
+│ betweenness             │ Network mein kitna bridge role                    │
+│ eigenvector_centrality  │ Powerful logon se kitna connected                 │
+│ call_count              │ Total phone calls (CDR se)                        │
+│ total_sent_inr          │ Kitna paisa bheja (hawala/bank)                   │
+│ total_received_inr      │ Kitna paisa aaya                                 │
+│ flagged_txn_count       │ Kitne suspicious transactions                    │
+│ suspicious_post_count   │ Kitne threatening social media posts              │
+└─────────────────────────┴──────────────────────────────────────────────────┘
+
+OUTPUT: Risk Level (Low / Medium / High / Critical) + Probability Distribution
+
+TRAINING PROCESS:
+1. enriched_df load hota hai (150 rows × 13 features)
+2. Missing values 0.0 se fill hoti hain
+3. Features StandardScaler se normalize hote hain (mean=0, std=1)
+4. Labels LabelEncoder se encode hote hain (Critical=0, High=1, Low=2, Medium=3)
+5. RandomForestClassifier fit hota hai
+6. Model, Scaler, Encoder, Feature names → .joblib files mein save
+
+RESULT: 100% Training Accuracy
+(150 samples pe 150 trees → overfitting possible but good for demo)
+
+EXPLAINABLE AI (XAI):
+Har prediction ke saath KYUN ye prediction aayi — ye batata hai:
+- Feature Importances: Random Forest internally har feature ko importance score deta hai
+- Impact Score = Feature Value × Importance Weight
+- Top 6 features sort karke dikhate hain
+
+Example Output:
+  Suspect SUS0024 (Suresh Shah):
+  Predicted: Critical (Confidence: 59.8%)
+  Top Drivers:
+    1. total_received_inr (received 80 lakh) → Highest impact
+    2. total_sent_inr (sent 45 lakh) → Second
+    3. age (45) → Third
+
+
+═══════════════════════════════════════════════════
+MODEL 2: CRIMINAL LINK PREDICTOR
+═══════════════════════════════════════════════════
+
+PURPOSE: Kya do suspects ke beech HIDDEN criminal connection hai?
+         Jo abhi graph mein edge nahi hai, kya future mein connection milega?
+
+ALGORITHM: Random Forest Classifier (100 trees, depth 6)
+
+INPUT (8 Features per suspect pair):
+┌───────────────────────┬──────────────────────────────────────────────────────┐
+│ Feature               │ Kya Measure Karta Hai                                │
+├───────────────────────┼──────────────────────────────────────────────────────┤
+│ common_neighbors      │ Kitne common contacts hain (Graph topology)          │
+│ jaccard_coefficient   │ Common neighbors / Total unique neighbors            │
+│ adamic_adar_index     │ Common neighbors weighted by 1/log(degree)           │
+│ preferential_attach   │ degree(A) × degree(B) — popular nodes attract        │
+│ same_gang             │ Kya dono same gang ke hain? (1 ya 0)                 │
+│ same_city             │ Kya dono same city mein hain? (1 ya 0)               │
+│ same_crime            │ Kya dono same crime type karte hain? (1 ya 0)        │
+│ prior_cases_sum       │ Dono ke prior cases ka total                         │
+└───────────────────────┴──────────────────────────────────────────────────────┘
+
+TRAINING DATA KAISE BANTA HAI:
+- POSITIVE PAIRS (label=1): network_edges.csv se — ye pairs mein edge hai
+  500 pairs jo already connected hain
+- NEGATIVE PAIRS (label=0): Randomly chosen pairs jismein NO edge hai
+  500 pairs jo connected NAHI hain
+- Total: 1000 pairs (balanced dataset)
+
+OUTPUT:
+  link_probability: 0.0 to 1.0 (collusion chance)
+  threat_status:
+    >= 0.70 → "HIGH Criminal Collusion Probability"
+    >= 0.40 → "MODERATE Indirect Link Potential"
+    < 0.40  → "LOW Probability of Collusion"
+
+RESULT: 90.2% Accuracy
+
+Topology Features Explained:
+
+COMMON NEIGHBORS:
+  A — C — B   (C is common neighbor of A and B)
+  Agar A aur B ke bahut saare common neighbors hain, toh A-B connected hone
+  ki probability HIGH hai.
+
+JACCARD COEFFICIENT:
+  |Neighbors(A) ∩ Neighbors(B)| / |Neighbors(A) ∪ Neighbors(B)|
+  Ye normalized measure hai — 0 to 1 range mein.
+
+ADAMIC-ADAR INDEX:
+  Sum over common neighbors w: 1/log(degree(w))
+  Agar common neighbor w ke bahut kam connections hain, toh uska contribution
+  ZYADA hota hai (wo specifically A aur B ke beech link hai).
+  Agar common neighbor w ke 100 connections hain, toh 1/log(100) = chhota
+  (wo sabse connected hai, A-B specific nahi).
+
+PREFERENTIAL ATTACHMENT:
+  degree(A) × degree(B)
+  Popular nodes ke beech connection hone ki probability zyada hoti hai.
+  "Rich get richer" phenomenon.
+
+
+═══════════════════════════════════════════════════
+MODEL 3: NLP SOCIAL MEDIA THREAT CLASSIFIER
+═══════════════════════════════════════════════════
+
+PURPOSE: Intercepted social media text se THREAT LEVEL identify karo.
+         Kya ye post Neutral hai ya Suspicious ya Threatening ya Coded?
+
+ALGORITHM: TF-IDF Vectorizer + Random Forest (100 trees, depth 8)
+
+TF-IDF KYA HAI? (Text ko Numbers mein Convert Karna)
+
+Step 1 — TOKENIZATION:
+  "New shipment arriving from border" → ["new", "shipment", "arriving", "from", "border"]
+
+Step 2 — TF (Term Frequency):
+  Har word kitni baar aaya ek document mein
+  "shipment" appears 1 time in 5 words → TF = 1/5 = 0.2
+
+Step 3 — IDF (Inverse Document Frequency):
+  Agar "shipment" sirf 10/600 posts mein aaya → IDF = log(600/10) = 1.78
+  Agar "the" 500/600 posts mein aaya → IDF = log(600/500) = 0.08
+  RARE words ko zyada weight milta hai kyunki wo zyada INFORMATIVE hain.
+
+Step 4 — TF-IDF = TF × IDF
+  "shipment" → 0.2 × 1.78 = 0.356 (important word!)
+  "the"      → 0.2 × 0.08 = 0.016 (not important)
+
+Our Settings:
+- ngram_range=(1,2): Unigrams + Bigrams ("shipment", "new shipment", "from border")
+- max_features=500: Top 500 most important features
+- sublinear_tf=True: TF ke log use karta hai (very frequent words ko dampen karta hai)
+
+TRAINING:
+- Input: 600 social media posts ka TF-IDF matrix (600 × 500)
+- Labels: ai_sentiment_flag (Neutral, Suspicious, Threatening, Coded/Ambiguous)
+- Random Forest 100 trees
+
+RESULT: 42.2% Accuracy
+(Ye LOW hai kyunki text data bahut diverse hai aur 600 posts kam hain.
+ Real production mein BERT/GPT jaisa model use hoga.)
+
+KEYWORD TRIGGER DETECTION (Rule-Based Enhancement):
+AI model ke saath, hum ye keywords bhi check karte hain:
+"shipment", "border", "package", "delivered", "naka", "police", 
+"lay low", "hot", "usual spot", "payment cleared", "big deal"
+
+Agar ye keywords text mein milte hain → Extra alert flag lagta hai.
+
+
+################################################################################
+PART 8: src/train_models.py — TRAINING PIPELINE
+################################################################################
+
+FILE: src/train_models.py (90 lines)
+
+YE KYA KARTA HAI:
+Ye script sequentially TEENO models train karta hai aur results print karta hai.
+
+EXECUTION FLOW:
+1. DataProcessor() call → saara data load
+2. CriminalGraphEngine(dp) call → graph build, metrics calculate
+3. MLPredictorSuite() create
+4. train_risk_classifier(enriched_df) → Risk model train & save
+5. train_link_predictor(graph, edges_df, suspects_df) → Link model train & save
+6. train_nlp_threat_classifier(posts_df) → NLP model train & save
+7. Sample inferences run karke verify karta hai
+
+COMMAND TO RUN:
+  python src/train_models.py
+
+OUTPUT (actual):
+  Risk Model Train Accuracy: 100.00%
+  Link Prediction Accuracy: 90.20% (1000 node pairs)
+  NLP Threat Model Accuracy: 42.17% (600 posts)
+  
+  SUS0024 (Suresh Shah) → Predicted: Critical (59.8% confidence)
+  SUS0024 ↔ SUS0104 → Link: 24.3% (Low Probability)
+  "New shipment arriving from border..." → Suspicious (CRITICAL alert)
+
+
+################################################################################
+PART 9: app.py — STREAMLIT DASHBOARD (POORA UI)
+################################################################################
+
+FILE: app.py (754 lines)
+FRAMEWORK: Streamlit (Python se web apps banane ka easiest framework)
+
+HOW STREAMLIT WORKS:
+- Tum Python code likho → Streamlit usse web page mein convert karta hai
+- st.markdown("# Title") → HTML heading ban jaata hai
+- st.plotly_chart(fig) → Interactive Plotly chart embed ho jaata hai
+- st.dataframe(df) → Sortable, searchable table ban jaati hai
+- st.selectbox("Label", options) → Dropdown ban jaata hai
+- st.button("Click") → Button ban jaata hai
+- streamlit run app.py → localhost:8501 pe browser mein khul jaata hai
+
+=== CUSTOM CSS (Dark Cyber Theme) ===
+Police/Intelligence agency wala dark theme:
+- Background: #0B0F19 (near-black blue)
+- Accent: #00D4FF (cyan blue)
+- Cards: Linear gradient dark blue
+- Text: #E6F1FF (light blue-white)
+- Risk Colors: Critical=#FF0055, High=#FF7700, Medium=#FFCC00, Low=#00DD88
+
+=== CACHING (@st.cache_resource) ===
+Streamlit har baar page refresh pe saara code re-run karta hai.
+@st.cache_resource decorator se heavy objects SIRF EK BAAR load hote hain:
+- DataProcessor() → sirf pehli baar CSV files read hoti hain
+- CriminalGraphEngine() → sirf pehli baar graph build hota hai
+- EvidenceBlockchain() → sirf pehli baar blockchain create hota hai
+- MLPredictorSuite() → sirf pehli baar models load hote hain
+
+=== SIDEBAR NAVIGATION ===
+Left side mein 10 radio buttons hain — har ek ek tab hai:
+1. Executive Overview
+2. 2D Network Explorer
+3. 3D Network Topology
+4. Kingpin Analyzer
+5. AI Risk Predictor
+6. AI Link Predictor
+7. NLP Threat Monitor
+8. Crime Hotspot Map
+9. Blockchain Evidence Vault
+10. Suspect Dossier
+
+Selected tab ke basis pe corresponding section render hota hai (if-elif chain).
+
+
+=== TAB 1: EXECUTIVE OVERVIEW ===
+Purpose: Senior officers ke liye bird's-eye view
+
+Components:
+1. 6 KPI CARDS (horizontal row):
+   - Total Suspects (150)
+   - Active Gangs (12)
+   - Critical Risk suspects count
+   - High Risk suspects count
+   - Total FIRs (220)
+   - Flagged Threat Posts count
+
+2. RISK PIE CHART (Plotly):
+   - 4 slices: Critical (red), High (orange), Medium (yellow), Low (green)
+   - Donut style (hole=0.45)
+
+3. TOP CRIME TYPES BAR CHART (Plotly):
+   - Horizontal bars showing FIR count per crime type
+   - Top 8 crime types
+
+4. GANG SUMMARY TABLE:
+   - Pandas DataFrame with background gradient on critical/high columns
+   - Shows members, kingpins, crime types per gang
+
+5. CDR ACTIVITY TIMELINE (Plotly Area Chart):
+   - X-axis: Date, Y-axis: Number of intercepted calls
+   - Shows call volume patterns over time
+
+
+=== TAB 2: 2D NETWORK EXPLORER ===
+Purpose: Interactive force-directed criminal network graph
+
+Components:
+1. FILTER CONTROLS:
+   - Gang filter dropdown (All, GANG01-GANG12)
+   - Risk filter dropdown (All, Critical, High, Medium, Low)
+   - Highlight specific suspect dropdown
+
+2. PYVIS GRAPH (embedded HTML):
+   - Physics simulation: nodes repel each other, edges pull them together
+   - Force Atlas 2-based layout
+   - Hover pe tooltip: Name, Gang, Role, Risk, Kingpin Score, City
+   - Node size proportional to Kingpin Score
+   - Edge color: Gold=Financial, Red=FIR, Gray=Call
+   - Scroll to zoom, drag to pan, click-drag nodes to rearrange
+
+
+=== TAB 3: 3D NETWORK TOPOLOGY ===
+Purpose: Immersive 3D visualization
+
+Components:
+1. Gang filter + Max nodes slider
+2. Plotly 3D Scatter:
+   - Spring layout algorithm generates X, Y, Z coordinates
+   - Nodes colored by Kingpin Score (Inferno colorscale)
+   - Semi-transparent blue edges
+   - Rotate with mouse drag, zoom with scroll
+
+
+=== TAB 4: KINGPIN ANALYZER ===
+Purpose: Identify most powerful network influencers
+
+Components:
+1. SLIDER: Top N kingpins (5 to 30)
+2. KINGPIN LEADERBOARD TABLE:
+   - Sorted by kingpin_score descending
+   - Background gradient on score and betweenness columns
+   - Shows: ID, Name, Gang, Role, Crime, Risk, Score, Betweenness, Degree, City
+
+3. BAR + LINE CHART (Plotly Subplots):
+   - Bars = Kingpin Score (red)
+   - Line = Betweenness Centrality (cyan)
+   - Dual Y-axis
+
+4. CRIMINAL PATH TRACER:
+   - Select Source suspect
+   - Select Target suspect
+   - Click "Trace Path"
+   - Shows: degrees of separation, intermediaries, hop-by-hop details
+
+
+=== TAB 5: AI RISK PREDICTOR ===
+Purpose: Per-suspect risk prediction with Explainable AI
+
+Components:
+1. SUSPECT SELECTOR dropdown
+2. "Predict Risk Level" button
+3. RESULTS:
+   - 3 KPI cards: Predicted Risk, Confidence %, Actual Label
+   - Risk Probability Distribution bar chart
+   - XAI Feature Attribution horizontal bar chart:
+     Shows top 6 features driving the prediction with impact scores
+
+
+=== TAB 6: AI LINK PREDICTOR ===
+Purpose: Predict hidden criminal collusion between two suspects
+
+Components:
+1. TWO SUSPECT SELECTORS (A and B)
+2. "Predict Criminal Link" button
+3. RESULTS:
+   - 4 KPI cards: Link Probability, Common Accomplices, Jaccard, Direct Edge
+   - Threat Assessment status
+   - Same Gang / Same City / Adamic-Adar details
+   - Mutual Accomplices table (if any)
+
+
+=== TAB 7: NLP THREAT MONITOR ===
+Purpose: Social media threat intelligence
+
+Components:
+1. SENTIMENT PIE CHART: Neutral (green), Suspicious (yellow), Threatening (red), Coded (purple)
+2. PLATFORM BAR CHART: Posts per platform (Twitter, Telegram, Instagram, etc.)
+3. FLAGGED POSTS TABLE: Top 30 threatening/suspicious posts with text, platform, score
+4. LIVE TEXT ANALYZER:
+   - Text area to paste intercepted communication
+   - "Analyze Threat Level" button
+   - Results: Category, Confidence, Alert Level, Trigger Keywords
+   - Probability distribution bar chart
+
+
+=== TAB 8: CRIME HOTSPOT MAP ===
+Purpose: Geographic crime density visualization
+
+Components:
+1. 3 KPI CARDS: Cities Covered, Top Hotspot City, Max Severity Score
+2. MAPBOX SCATTER MAP:
+   - India map with dark tiles
+   - Circles at each city — size and color = severity score
+   - Hover shows FIR count, suspect count, CDR activity
+3. CITY SEVERITY TABLE with background gradient
+
+
+=== TAB 9: BLOCKCHAIN EVIDENCE VAULT ===
+Purpose: Blockchain chain of custody explorer
+
+Components:
+1. CHAIN INTEGRITY STATUS:
+   - 4 KPI cards: Total Blocks, Verified, Corrupted, Status
+   - Green success or red error message
+2. CHAIN EXPLORER:
+   - Each block displayed as styled card showing:
+     Block #, Evidence Type, ID, Case, Officer, Station, Role
+     Evidence Hash, Merkle Root, Block Hash, Previous Hash, Payload
+3. TAMPERING SIMULATOR:
+   - Input: Block index to tamper
+   - "Simulate Tampering Attack" button → injects fake data
+   - "Verify Chain Integrity" button → detects the tampering
+   - Demo flow: Tamper → Verify → See "TAMPERED" error → Impressive demo!
+
+
+=== TAB 10: SUSPECT DOSSIER ===
+Purpose: Comprehensive intelligence dossier for any suspect
+
+Components:
+1. SUSPECT SELECTOR
+2. "Generate Full Dossier" button
+3. PROFILE HEADER: Name, Risk, Gang, Role (4 KPI cards)
+4. PERSONAL PROFILE: Age, Gender, City, Prior Cases
+5. LINKED FIR CASES table
+6. CO-ACCUSED list
+7. CDR CALL INTELLIGENCE: Total calls, unique contacts, recent calls table
+8. SOCIAL MEDIA FOOTPRINT: Posts table with sentiment flags
+9. NETWORK POSITION: Degree, Kingpin Score, Betweenness, Community ID, Clustering
+
+
+################################################################################
+PART 10: KAISE RUN KARNA HAI? (Step by Step)
+################################################################################
+
+PREREQUISITES:
+- Python 3.13 installed (C:\Users\Himanshu\AppData\Local\Programs\Python\Python313\)
+- Packages installed: pandas, numpy, scikit-learn, networkx, streamlit, plotly, pyvis, joblib
+
+STEP 1: TRAIN MODELS (one-time)
+  cd "F:\Ai powered criminal analysis"
+  python src/train_models.py
+  
+  Ye kya karega:
+  - 7 CSV files load karega
+  - Graph build karega (150 nodes, 1567 edges)
+  - 3 ML models train karega
+  - models/ folder mein 9 .joblib files save karega
+  - Sample predictions dikhayega
+
+STEP 2: RUN DASHBOARD
+  streamlit run app.py
+  
+  Ye kya karega:
+  - Browser mein http://localhost:8501 pe dashboard khulega
+  - Data load hoga, graph build hoga, models load honge
+  - 10 tabs mein navigate karo aur explore karo
+
+STEP 3: EXPLORE
+  - Executive Overview → bird's-eye view
+  - Network tabs → criminal connections dekhoo
+  - Kingpin tab → sabse powerful suspects
+  - AI tabs → predictions run karo
+  - Blockchain tab → tampering demo karo
+  - Dossier tab → kisi bhi suspect ka full report nikalo
+
+
+################################################################################
+PART 11: TECHNOLOGY STACK EXPLAINED
+################################################################################
+
+PYTHON 3.13:
+  Main programming language. Saara code Python mein hai.
+
+PANDAS (pd):
+  CSV files load karna, data filtering, groupby, merge — sab Pandas se.
+  DataFrame = Excel spreadsheet jaisi 2D table in Python.
+
+NUMPY (np):
+  Numerical operations — arrays, mathematical functions.
+  ML models internally NumPy arrays pe kaam karte hain.
+
+SCIKIT-LEARN (sklearn):
+  Machine Learning library:
+  - RandomForestClassifier: Decision tree ensemble model
+  - TfidfVectorizer: Text → numerical features
+  - LabelEncoder: Categorical labels → numbers
+  - StandardScaler: Features ko normalize karna (mean=0, std=1)
+  - accuracy_score: Model accuracy calculate karna
+
+NETWORKX (nx):
+  Graph analytics library:
+  - nx.Graph() → undirected graph create karna
+  - add_node(), add_edge() → nodes aur edges add karna
+  - betweenness_centrality(), pagerank() → centrality metrics
+  - community.louvain_communities() → community detection
+  - shortest_path() → shortest path between two nodes
+  - spring_layout(dim=3) → 3D layout coordinates
+
+STREAMLIT (st):
+  Web dashboard framework:
+  - st.set_page_config() → page title, layout
+  - st.sidebar → left panel
+  - st.columns() → horizontal layout
+  - st.plotly_chart() → Plotly charts embed karna
+  - st.dataframe() → interactive tables
+  - st.selectbox(), st.button() → user inputs
+  - @st.cache_resource → heavy objects cache karna
+
+PLOTLY (px, go):
+  Interactive visualization library:
+  - px.pie() → pie chart
+  - px.bar() → bar chart
+  - px.area() → area chart
+  - px.scatter_mapbox() → geographic map
+  - go.Scatter3d() → 3D scatter plot
+  - go.Figure() → custom figures
+
+PYVIS:
+  Interactive network graph visualization:
+  - Network() → graph create karna
+  - add_node(), add_edge() → visual elements add karna
+  - force_atlas_2based() → physics layout configuration
+  - save_graph() → HTML file generate karna
+
+JOBLIB:
+  Model serialization:
+  - joblib.dump(model, path) → trained model ko file mein save karna
+  - joblib.load(path) → saved model ko wapas load karna
+
+HASHLIB:
+  Cryptographic hashing:
+  - hashlib.sha256(data.encode()).hexdigest() → SHA-256 hash generate karna
+  - 256-bit (64 hex characters) unique fingerprint of any data
+
+
+################################################################################
+PART 12: INTERVIEW/VIVA READY QUESTIONS & ANSWERS
+################################################################################
+
+Q1: "Aapka project kya karta hai?"
+A1: CrimeGraph AI ek AI-powered criminal network analysis system hai jo 
+    multiple data sources (CDR, FIR, Social Media) ko combine karke criminal
+    networks ko graph analytics se map karta hai, ML models se risk predict 
+    karta hai, aur blockchain se digital evidence tamper-proof rakhta hai.
+
+Q2: "Blockchain kyun use kiya? Database se kya fark hai?"
+A2: Traditional database mein koi bhi admin record modify kar sakta hai —
+    court mein evidence ki integrity prove karna mushkil hai. Blockchain mein 
+    har record ka SHA-256 hash hai aur har block previous block se cryptographically
+    linked hai. Agar ek character bhi change ho, hash mismatch se automatically 
+    detect ho jayega. Isse evidence COURT-ADMISSIBLE ban jaata hai.
+
+Q3: "Kingpin kaise identify karte ho?"
+A3: Hum 5 graph metrics combine karte hain:
+    - Betweenness Centrality (35%): Jo suspect sabse zyada shortest paths pe 
+      baitha hai, wo information flow control karta hai
+    - Eigenvector Centrality (35%): Jo powerful logon se connected hai
+    - PageRank (15%): Google-style importance ranking
+    - Degree (10%): Kitne connections hain
+    - Prior Cases (5%): Criminal history
+    In sab ka weighted combination = Kingpin Score (0-100)
+
+Q4: "Risk prediction kaise hoti hai?"
+A4: Random Forest Classifier 13 features pe trained hai — age, prior cases,
+    FIR count, graph centrality metrics, CDR frequency, financial flags, aur
+    social media threats. Model 100% training accuracy deta hai. Har prediction
+    ke saath Explainable AI (XAI) batata hai ki KAUNSE features ne prediction
+    drive kiya — toh officer ko BLACK BOX nahi, transparent reasoning milti hai.
+
+Q5: "Link Prediction kya hai?"
+A5: Ye predict karta hai ki kya do suspects jo ABHI directly connected nahi hain,
+    actually secretly connected ho sakte hain. Hum graph topology features use
+    karte hain — Common Neighbors, Jaccard Coefficient, Adamic-Adar Index, aur
+    attribute similarity (same gang, city, crime type). 90.2% accuracy mili.
+
+Q6: "NLP model ki accuracy 42% kyun hai?"
+A6: NLP model TF-IDF + Random Forest pe based hai jo relatively simple approach 
+    hai text classification ke liye. 600 posts diverse text data hai with 4 classes.
+    Production mein BERT ya GPT fine-tuned model use karenge jo 85%+ accuracy de 
+    sakta hai. Abhi ke liye supplementary keyword-based detection bhi lagaya hai.
+
+Q7: "Smart Contract kya hai yahan?"
+A7: Hamara blockchain ek role-based access control enforce karta hai — 
+    Investigating Officer sirf FIR/Seizure Memo register kar sakta hai,
+    Cyber Cell sirf CDR/Social Media evidence, Forensic Expert sirf Lab Reports,
+    aur Magistrate sirf Court Orders. Ye "Smart Contract" unauthorized access
+    prevent karta hai aur audit trail maintain karta hai.
+
+Q8: "Community Detection kaise kaam karta hai?"
+A8: Louvain Algorithm use karte hain jo network ko modules/communities mein
+    todta hai. Ye MODULARITY maximize karta hai — matlab same community ke
+    andar zyada connections honi chahiye aur different communities ke beech kam.
+    Isse hidden sub-gangs identify hote hain jo official gang affiliation se
+    different ho sakte hain.
+
+Q9: "Scalability kaise handle karoge?"
+A9: Current system 150 suspects pe demo hai. Scale karne ke liye:
+    - Neo4j graph database use karenge (millions of nodes handle kar sakta hai)
+    - Apache Kafka se real-time CDR streaming
+    - Hyperledger Fabric for production blockchain
+    - GPU-based deep learning models
+    - Microservices architecture with Docker/Kubernetes
+
+Q10: "Kya ye real police data pe kaam karega?"
+A10: Architecture design kiya hai CCTNS (Crime and Criminal Tracking Network) 
+     ke compatible. Real deployment mein:
+     - CCTNS API se FIR data feed hoga
+     - Telecom operators ke CDR APIs se call data
+     - Social media APIs (Twitter, Telegram) se OSINT
+     - Banks ke STR (Suspicious Transaction Reports) se financial data
+     Data format same rahega, sirf data source change hoga.
+
+
+################################################################################
+PART 13: FLOW DIAGRAM — POORA SYSTEM KAISE CHALTA HAI
+################################################################################
+
+USER opens browser → localhost:8501
+            │
+            ▼
+   ┌──── app.py (Streamlit) ────┐
+   │                             │
+   │  @cache DataProcessor()     │──→ Loads 7 CSV files from data/
+   │  @cache GraphEngine(dp)     │──→ Builds 150-node, 1567-edge graph
+   │  @cache Blockchain()        │──→ Creates 6-block evidence chain
+   │  @cache MLPredictorSuite()  │──→ Loads 9 .joblib trained models
+   │                             │
+   │  Sidebar: 10 tab navigation │
+   │                             │
+   │  Tab 1 selected?            │
+   │  → Show KPIs, charts, table │
+   │                             │
+   │  Tab 4 selected?            │
+   │  → graph_engine.get_top_    │
+   │    kingpins(15)             │
+   │  → Show leaderboard + chart │
+   │                             │
+   │  Tab 5 selected?            │
+   │  → User selects suspect     │
+   │  → ml_suite.predict_        │
+   │    suspect_risk(features)   │
+   │  → Show prediction + XAI    │
+   │                             │
+   │  Tab 9 selected?            │
+   │  → blockchain.verify_chain  │
+   │  → Show blocks + status     │
+   │  → User clicks "Tamper"     │
+   │  → blockchain.simulate_     │
+   │    tampering_attack()       │
+   │  → User clicks "Verify"     │
+   │  → Shows TAMPERED error!    │
+   │                             │
+   └─────────────────────────────┘
+
+
+################################################################################
+PART 14: WHAT MAKES THIS PROJECT SIH-WORTHY?
+################################################################################
+
+1. MULTI-DISCIPLINARY:
+   AI + Graph Theory + Blockchain + Cybersecurity + Data Science + Web Dev
+   → 6 domains covered in one project
+
+2. REAL-WORLD IMPACT:
+   Police investigation mein ACTUALLY useful hai — criminal networks map karna,
+   hidden links find karna, evidence secure karna
+
+3. EXPLAINABILITY:
+   AI models BLACK BOX nahi hain — har prediction ke saath KYUN batate hain
+   → Officers trust kar sakte hain
+
+4. BLOCKCHAIN USP:
+   Evidence tampering is a REAL PROBLEM in Indian judiciary
+   → Blockchain solution is unique and court-relevant
+
+5. INTERACTIVE DEMO:
+   10 tabs ka live dashboard — judges ko DIKHAA sakte ho, sirf PPT nahi
+   → Tampering simulator se LIVE DEMO de sakte ho
+
+6. SCALABLE ARCHITECTURE:
+   Modular design — individual engines independent hain
+   → Easy to upgrade/replace any component
+
+7. COMPREHENSIVE DATA:
+   3,685+ records across 7 datasets — realistic simulation
+   → Not a toy project
+
+================================================================================
+                        END OF ZERO TO HERO GUIDE
+                    CrimeGraph AI — 1000% Documentation
+================================================================================

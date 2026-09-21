@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+scikit-learn
+networkx
+plotly
+pyvis
+joblib
+cryptography
+pillow
+reportlab

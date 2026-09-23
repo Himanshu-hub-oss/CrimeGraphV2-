@@ -9,3 +9,4 @@ joblib
 cryptography
 pillow
 reportlab
+matplotlib

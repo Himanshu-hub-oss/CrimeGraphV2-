@@ -1,0 +1,15 @@
+[
+  {
+    "evidence_id": "EVID-UP-A29AD842E293",
+    "case_id": "CASE-2026-100",
+    "filename": "qrcode_404478016_eda8a56716ba394292d6d0920d7ccca2.png",
+    "path": "C:\\Users\\Himanshu\\Downloads\\CrimeGraph-AI-Advanced-v9-Photo-Fixed\\Ai powered criminal analysis\\data\\evidence_files\\EVID-UP-A29AD842E293_qrcode_404478016_eda8a56716ba394292d6d0920d7ccca2.png",
+    "size_bytes": 13447,
+    "sha256": "a29ad842e293cd701e6c85c019e36cf03b5ceeb28240f5e4a4e2edec8a98b4a7",
+    "evidence_type": "FIR Record",
+    "description": "Machine Found At location",
+    "officer_badge": "HQ-ADMIN-001",
+    "role": "ADMIN",
+    "uploaded_at": "2026-09-23T20:35:31"
+  }
+]
